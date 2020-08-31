@@ -28,6 +28,7 @@
 	font-size: 70px;
 	position: absolute;
 	mix-blend-mode: overlay;
+	padding: 5%;
 }
 .box {
 	width: 40%;

@@ -1,22 +1,32 @@
 import React from 'react';
 
 import css from './CountryDescription.module.css';
+import { connect } from 'react-redux';
+import { getSity } from '../../redux/actions/action';
+import DescriptionCity from '../../components/DescriptionCity/DescriptionCity';
 
-function CountryDescription() {
-	const arr = ['hello', 'goga', 'rototototd', 'fara', 'rogaaa', 'bounty'];
+function CountryDescription({ arrCountry, idCard, getIdSity, idSity }) {
+	const clickOnSity = (e) => {
+		getIdSity(e.target.id);
+		console.log(e.target.id);
+	};
 
 	return (
 		<div className={css.block} id='list'>
 			<div className={css.countrys}>
 				<div className={css.cityCss}>
-					{arr.map((city, index) => {
-						return <div key={index}>{city}</div>;
+					{arrCountry[idCard].sities.map((cityName, index) => {
+						return (
+							<div key={index} onClick={clickOnSity} id={index}>
+								{cityName.name}
+							</div>
+						);
 					})}
 				</div>
 			</div>
 
 			<div className={css.imgDescription}>
-				{arr.map((imgDescription, index) => {
+				{arrCountry[idCard].sities.map((cities, index) => {
 					return (
 						<div
 							className={css.blockImgDesc}
@@ -25,14 +35,20 @@ function CountryDescription() {
 							<div className={css.oneBlockImg}>
 								<div className={css.blockImg}>
 									<img
-										src='https://i.otzovik.com/objects/b/1320000/1316895.png'
+										src={
+											idSity ? cities.attractions[idSity].imgAttractions : null
+										}
 										alt=''
 									/>
 								</div>
 								<div className={css.blockP}>
-									<p>{imgDescription}</p>
+									<p>
+										{idSity ? cities.attractions[idSity].nameAttractions : null}
+									</p>
 								</div>
 							</div>
+
+							{/* <DescriptionCity cities={cities} idSity={idSity} /> */}
 						</div>
 					);
 				})}
@@ -41,4 +57,17 @@ function CountryDescription() {
 	);
 }
 
-export default CountryDescription;
+const mapStateToProps = (state) => {
+	return {
+		arrCountry: state.countrysReducer,
+		idCard: state.cardReducer.idCard,
+		idSity: state.cardReducer.idSity,
+	};
+};
+const mapDispatchToProps = (dispatch) => {
+	return {
+		getIdSity: (num) => dispatch(getSity(num)),
+	};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CountryDescription);

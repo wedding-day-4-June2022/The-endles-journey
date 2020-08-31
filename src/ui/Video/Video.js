@@ -8,7 +8,7 @@ function Video() {
 		<div className={css.block} id='home'>
 			<video loop className={css.video} autoPlay muted src={Blue}></video>
 			<div className={css.box}>
-				<h2 className={css.h2}>The endles journey </h2>
+				<h2 className={css.h2}>Project : The endles journey </h2>
 			</div>
 		</div>
 	);

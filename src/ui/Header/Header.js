@@ -4,7 +4,9 @@ import logo from './logo.png';
 
 import css from './Header.module.css';
 
-function Header({ isActive }) {
+import { connect } from 'react-redux';
+
+function Header({ idCard }) {
 	const [bool, setBool] = useState(false);
 
 	window.addEventListener('scroll', (e) => {
@@ -22,16 +24,18 @@ function Header({ isActive }) {
 				<div className={css.blockLogo}>
 					<img src={logo} alt='' className={css.logo} />
 				</div>
-				<a href='#home' className={isActive ? css.noActive : null}>
+
+				<a href='#home' className={idCard ? css.default : css.noActive}>
 					Home
 				</a>
-				<NavLink to='/allCountrys' className={isActive ? css.noActive : null}>
+
+				<NavLink to='/allCountrys' className={css.default}>
 					All countrys
 				</NavLink>
-				<a href='#list' className={isActive ? css.noActive : null}>
+				<a href='#list' className={idCard ? css.default : css.noActive}>
 					List
 				</a>
-				<a href='#about' className={isActive ? css.noActive : null}>
+				<a href='#about' className={idCard ? css.default : css.noActive}>
 					About us
 				</a>
 			</div>
@@ -39,4 +43,10 @@ function Header({ isActive }) {
 	);
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+	return {
+		idCard: state.cardReducer.idCard,
+	};
+};
+
+export default connect(mapStateToProps, null)(Header);

@@ -3,7 +3,7 @@ import React from 'react';
 import css from './ListCountrys.module.css';
 import CardCountry from '../../components/CardCountry';
 
-function ListCountrys() {
+const ListCountrys = () => {
 	return (
 		<div>
 			<div className={css.popular}>
@@ -11,6 +11,6 @@ function ListCountrys() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default ListCountrys;

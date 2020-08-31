@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { connect } from 'react-redux';
 import './App.css';
 
 import { Route } from 'react-router-dom';
@@ -7,13 +8,19 @@ import { Route } from 'react-router-dom';
 import ListCountrys from './ui/ListCountrys/ListCountrys';
 import Main from './pages/Main';
 
-const App = React.memo(() => {
+const App = () => {
 	return (
 		<div className='block'>
 			<Route exact path={'/'} component={Main} />
 			<Route path='/allCountrys' component={ListCountrys} />
 		</div>
 	);
-});
+};
 
-export default App;
+const mapStateToProps = (state) => {
+	return {
+		item: state.countresReducer,
+	};
+};
+
+export default connect(mapStateToProps, null)(App);

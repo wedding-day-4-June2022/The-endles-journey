@@ -6,16 +6,25 @@ import Converter from '../ui/Converter/Converter';
 import CountryDescription from '../ui/CountryDiscribtion/CountryDescription';
 import Accordion from '../ui/Accordion/Accordion';
 
-function Main() {
+import { connect } from 'react-redux';
+
+function Main({ idCard }) {
 	return (
 		<div>
 			<Header />
 			<Video />
-			<CountryDescription key={Math.random()} />
-			<Converter />
-			<Accordion />
+			{idCard ? <CountryDescription key={Math.random()} /> : null}
+			{idCard ? <Converter /> : null}
+			{idCard ? <Accordion /> : null}
 		</div>
 	);
 }
 
-export default Main;
+const mapStateToProps = (state) => {
+	console.log(state.cardReducer, 'state Main');
+	return {
+		idCard: state.cardReducer.idCard,
+	};
+};
+
+export default connect(mapStateToProps, null)(Main);

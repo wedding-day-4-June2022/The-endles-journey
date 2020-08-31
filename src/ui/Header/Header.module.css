@@ -30,7 +30,6 @@
 	font-size: 25px;
 	width: 15%;
 	height: 100%;
-	color: skyblue;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -59,15 +58,16 @@
 	height: 8vh;
 	display: flex;
 	justify-content: space-around;
+	box-shadow: 3px 3px 10px white inherit;
 }
 
-.ref a {
+.default {
 	text-decoration: none;
 	font-weight: 700;
 	font-size: 20px;
 	width: 15%;
 	height: 100%;
-	color: rgb(89, 162, 190);
+	color: rgb(39, 133, 89);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -76,7 +76,11 @@
 	-moz-transition: 1s;
 	-ms-transition: 1s;
 	-o-transition: 1s;
+	text-shadow: 3px 3px 10px rgb(219, 213, 213);
 }
+
+/* .ref a {
+} */
 
 .ref a:hover {
 	transition: 0.5s;
@@ -101,6 +105,7 @@
 .noActive {
 	pointer-events: none;
 	cursor: default;
-	color: #888;
-	background-color: slategray;
+	color: rgb(109, 107, 107);
+	background-color: rgba(39, 39, 39, 0.3);
+	text-shadow: 3px 3px 5px rgb(0, 0, 0);
 }

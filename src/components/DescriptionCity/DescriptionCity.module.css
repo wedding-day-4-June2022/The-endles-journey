@@ -1,0 +1,28 @@
+.oneBlockImg {
+	width: 100%;
+	height: 18vh;
+	padding: 1%;
+	display: flex;
+	border-radius: 40px;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	-ms-border-radius: 40px;
+	-o-border-radius: 40px;
+	overflow: hidden;
+}
+
+.blockImg {
+	width: 30%;
+	height: 100%;
+}
+
+.blockImg img {
+	width: 100%;
+	height: 100%;
+}
+
+.blockP {
+	width: 70%;
+	height: 100%;
+	background-color: springgreen;
+}
