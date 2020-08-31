@@ -1,0 +1,83 @@
+.block {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.countrys {
+	width: 40vw;
+	height: 70vh;
+	background-color: yellow;
+	border-radius: 10%;
+	-webkit-border-radius: 10%;
+	-moz-border-radius: 10%;
+	-ms-border-radius: 10%;
+	-o-border-radius: 10%;
+}
+
+.imgDescription {
+	background-color: slategray;
+	width: 40vw;
+	height: 70vh;
+	border-radius: 10%;
+	-webkit-border-radius: 10%;
+	-moz-border-radius: 10%;
+	-ms-border-radius: 10%;
+	-o-border-radius: 10%;
+	padding: 1%;
+	overflow: auto;
+}
+.cityCss {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding-top: 3%;
+}
+
+.cityCss div {
+	border: 1px solid red;
+	margin: 1% 0;
+	width: 22%;
+	min-width: 22%;
+	height: 7vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20%;
+	-webkit-border-radius: 20%;
+	-moz-border-radius: 20%;
+	-ms-border-radius: 20%;
+	-o-border-radius: 20%;
+}
+
+.blockImgDesc {
+	display: flex;
+}
+
+.blockImg {
+	width: 30%;
+	height: 100%;
+}
+.blockImg img {
+	width: 100%;
+	height: 100%;
+}
+.blockP {
+	width: 70%;
+	height: 100%;
+	background-color: springgreen;
+}
+.oneBlockImg {
+	width: 100%;
+	height: 18vh;
+	padding: 1%;
+	display: flex;
+	border-radius: 40px;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	-ms-border-radius: 40px;
+	-o-border-radius: 40px;
+	overflow: hidden;
+}

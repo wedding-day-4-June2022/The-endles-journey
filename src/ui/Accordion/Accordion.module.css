@@ -1,0 +1,49 @@
+.wraper {
+	max-width: 60vw;
+	margin: 0 auto;
+}
+
+ul.accordion {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+}
+
+ul.accordion li {
+	width: 8vw;
+	overflow: hidden;
+	padding: 0.5%;
+	cursor: pointer;
+	display: block;
+	box-shadow: 2px 2px 5px black;
+	transition: all 1.5s;
+	-webkit-transition: all 1.5s;
+	-moz-transition: all 1.5s;
+	-ms-transition: all 1.5s;
+	-o-transition: all 1.5s;
+}
+ul.accordion img {
+	min-width: 100%;
+	height: 35vh;
+}
+
+ul.accordion li:hover {
+	width: 100%;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
+}
+
+ul.accordion li:nth-child(4) {
+	width: 100%;
+}
+
+ul.accordion:hover li:nth-child(4) {
+	width: 8vw;
+}
+
+ul.accordion li:nth-child(4):hover {
+	width: 100%;
+}

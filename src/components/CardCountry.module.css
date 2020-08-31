@@ -1,0 +1,95 @@
+.cardBlock {
+	display: flex;
+	justify-content: center;
+	background-color: grey;
+	padding-top: 1%;
+}
+
+.card {
+	width: 21vw;
+	height: 36vh;
+	background-color: green;
+	margin: 1%;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+}
+.card__Img img {
+	width: 100%;
+	height: 100%;
+}
+
+.card__Img {
+	width: 100%;
+	height: 50%;
+}
+
+.enter {
+	color: steelblue;
+	width: 21vw;
+	height: 35vh;
+	background-color: green;
+	margin: 1%;
+}
+
+.discribe__country {
+	width: 100%;
+	height: 50%;
+	text-align: center;
+}
+.discribe__country b {
+	font-size: 20px;
+	display: block;
+}
+
+.navLink {
+	text-decoration: none;
+	color: black;
+	font-weight: 800;
+	font-size: 16px;
+}
+
+.hoverEffect {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	transform: translateY(120%);
+	-webkit-transform: translateY(120%);
+	-moz-transform: translateY(120%);
+	-ms-transform: translateY(120%);
+	-o-transform: translateY(120%);
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	cursor: pointer;
+	text-align: center;
+}
+
+.card:hover .hoverEffect {
+	transform: translateY(0);
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	text-align: center;
+	box-shadow: 3px 3px 10px rgb(0, 255, 255) inset;
+}
+
+.hoverEffect h2 {
+	color: wheat;
+}
+.hoverEffect p {
+	color: rgb(143, 137, 131);
+}
+.hoverEffect p,
+.hoverEffect h2 {
+	font-family: 'Times New Roman', Times, serif;
+}

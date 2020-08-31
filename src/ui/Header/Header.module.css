@@ -1,0 +1,106 @@
+.block {
+	background-color: rgba(0, 0, 0, 0.2);
+	width: 100%;
+	height: 10vh;
+	position: fixed;
+	z-index: 9;
+}
+.blockBottom {
+	background-color: rgba(0, 0, 0, 0.2);
+	width: 100%;
+	height: 8vh;
+	position: fixed;
+	z-index: 9;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-around;
+	height: 10vh;
+	align-items: center;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+.nav a {
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 25px;
+	width: 15%;
+	height: 100%;
+	color: skyblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+.nav a:hover {
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	background-color: #fff;
+}
+
+.ref {
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	background-color: rgba(0, 0, 0, 0.8);
+	height: 8vh;
+	display: flex;
+	justify-content: space-around;
+}
+
+.ref a {
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 20px;
+	width: 15%;
+	height: 100%;
+	color: rgb(89, 162, 190);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 1s;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-ms-transition: 1s;
+	-o-transition: 1s;
+}
+
+.ref a:hover {
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	background-color: #fff;
+}
+
+.blockLogo {
+	width: 15%;
+	height: 100%;
+}
+
+.logo {
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.noActive {
+	pointer-events: none;
+	cursor: default;
+	color: #888;
+	background-color: slategray;
+}
