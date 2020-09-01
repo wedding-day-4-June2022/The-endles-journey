@@ -2,3 +2,9 @@ html {
 	position: relative;
 	scroll-behavior: smooth;
 }
+
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}

@@ -2,13 +2,28 @@ import React from 'react';
 
 import css from './CountryDescription.module.css';
 import { connect } from 'react-redux';
-import { getSity } from '../../redux/actions/action';
-import DescriptionCity from '../../components/DescriptionCity/DescriptionCity';
+import {
+	getSity,
+	getAttraction,
+	getSityAttraction,
+} from '../../redux/actions/action';
 
-function CountryDescription({ arrCountry, idCard, getIdSity, idSity }) {
+function CountryDescription({
+	arrCountry,
+	idCard,
+	getIdSity,
+	idSity,
+	isAttractionFunc,
+	getIdCityAttraction,
+}) {
 	const clickOnSity = (e) => {
 		getIdSity(e.target.id);
-		console.log(e.target.id);
+	};
+
+	const changeAttractionFunc = (e) => {
+		isAttractionFunc(e.target.id);
+		getIdCityAttraction(e.target.id);
+		document.body.style.overflow = 'hidden';
 	};
 
 	return (
@@ -17,7 +32,12 @@ function CountryDescription({ arrCountry, idCard, getIdSity, idSity }) {
 				<div className={css.cityCss}>
 					{arrCountry[idCard].sities.map((cityName, index) => {
 						return (
-							<div key={index} onClick={clickOnSity} id={index}>
+							<div
+								key={index}
+								onClick={clickOnSity}
+								id={index}
+								className={css.cityNameCss}
+							>
 								{cityName.name}
 							</div>
 						);
@@ -26,32 +46,38 @@ function CountryDescription({ arrCountry, idCard, getIdSity, idSity }) {
 			</div>
 
 			<div className={css.imgDescription}>
-				{arrCountry[idCard].sities.map((cities, index) => {
-					return (
-						<div
-							className={css.blockImgDesc}
-							key={Math.random() + Math.random()}
-						>
-							<div className={css.oneBlockImg}>
-								<div className={css.blockImg}>
-									<img
-										src={
-											idSity ? cities.attractions[idSity].imgAttractions : null
-										}
-										alt=''
-									/>
-								</div>
-								<div className={css.blockP}>
-									<p>
-										{idSity ? cities.attractions[idSity].nameAttractions : null}
-									</p>
+				{idSity ? (
+					arrCountry[idCard].sities[idSity].attractions.map((cities, index) => {
+						return (
+							<div
+								className={css.blockImgDesc}
+								key={Math.random() + Math.random()}
+								onClick={changeAttractionFunc}
+							>
+								<div className={css.oneBlockImg}>
+									<div className={css.blockImg} id={index}>
+										<img src={cities.imgAttractions} alt='' id={index} />
+									</div>
+									<div className={css.blockP}>
+										<p className={css.nameAttraction} id={index}>
+											{cities.nameAttractions}
+										</p>
+										<p className={css.describeAttraction} id={index}>
+											{cities.describeAttraction}
+										</p>
+									</div>
 								</div>
 							</div>
-
-							{/* <DescriptionCity cities={cities} idSity={idSity} /> */}
-						</div>
-					);
-				})}
+						);
+					})
+				) : (
+					<div className={css.divText}>
+						<h3>
+							{' '}
+							Выберите город, и тут появятся его достопримичательности =){' '}
+						</h3>
+					</div>
+				)}
 			</div>
 		</div>
 	);
@@ -59,7 +85,7 @@ function CountryDescription({ arrCountry, idCard, getIdSity, idSity }) {
 
 const mapStateToProps = (state) => {
 	return {
-		arrCountry: state.countrysReducer,
+		arrCountry: state.countresReducer,
 		idCard: state.cardReducer.idCard,
 		idSity: state.cardReducer.idSity,
 	};
@@ -67,6 +93,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		getIdSity: (num) => dispatch(getSity(num)),
+		isAttractionFunc: (num) => dispatch(getAttraction(num)),
+		getIdCityAttraction: (num) => dispatch(getSityAttraction(num)),
 	};
 };
 

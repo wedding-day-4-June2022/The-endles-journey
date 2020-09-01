@@ -26,6 +26,7 @@
 }
 .nav a {
 	text-decoration: none;
+	text-align: center;
 	font-weight: 700;
 	font-size: 25px;
 	width: 15%;
@@ -62,6 +63,7 @@
 }
 
 .default {
+	text-align: center;
 	text-decoration: none;
 	font-weight: 700;
 	font-size: 20px;

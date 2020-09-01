@@ -26,17 +26,17 @@ function Header({ idCard }) {
 				</div>
 
 				<a href='#home' className={idCard ? css.default : css.noActive}>
-					Home
+					Домой
 				</a>
 
 				<NavLink to='/allCountrys' className={css.default}>
-					All countrys
+					Все страны
 				</NavLink>
 				<a href='#list' className={idCard ? css.default : css.noActive}>
-					List
+					{idCard ? 'Города в "Исландия"' : 'Города в "?"'}
 				</a>
 				<a href='#about' className={idCard ? css.default : css.noActive}>
-					About us
+					Конвертер валют
 				</a>
 			</div>
 		</div>

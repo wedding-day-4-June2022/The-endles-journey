@@ -19,8 +19,8 @@
 
 .imgDescription {
 	background-color: slategray;
-	width: 40vw;
-	height: 70vh;
+	width: 50vw;
+	height: 80vh;
 	border-radius: 10%;
 	-webkit-border-radius: 10%;
 	-moz-border-radius: 10%;
@@ -34,6 +34,9 @@
 	justify-content: space-around;
 	flex-wrap: wrap;
 	padding-top: 3%;
+}
+.cityNameCss {
+	cursor: pointer;
 }
 
 .cityCss div {
@@ -68,10 +71,12 @@
 	width: 70%;
 	height: 100%;
 	background-color: springgreen;
+	overflow-y: auto;
 }
 .oneBlockImg {
 	width: 100%;
 	height: 18vh;
+	cursor: pointer;
 	padding: 1%;
 	display: flex;
 	border-radius: 40px;
@@ -80,4 +85,38 @@
 	-ms-border-radius: 40px;
 	-o-border-radius: 40px;
 	overflow: hidden;
+}
+
+.divText {
+	width: 65%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.divText h3 {
+	font-size: 24px;
+}
+
+.nameAttraction {
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 0;
+	margin: 0;
+	padding-top: 1%;
+	text-shadow: 2px 3px 5px black;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	border-bottom: 1px solid rgb(102, 100, 100);
+	width: 100%;
+	margin: 0 auto;
+}
+
+.describeAttraction {
+	padding: 0 4%;
+	font-weight: 550;
+	width: 100%;
+	box-sizing: border-box;
 }

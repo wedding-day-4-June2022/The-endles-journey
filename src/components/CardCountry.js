@@ -36,7 +36,7 @@ const CardCountry = ({ arrCountry, getId, idCard }) => {
 
 const mapStateToProps = (state) => {
 	return {
-		arrCountry: state.countrysReducer,
+		arrCountry: state.countresReducer,
 		idCard: state.cardReducer,
 	};
 };
