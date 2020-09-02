@@ -22,7 +22,14 @@ const CardCountry = ({ arrCountry, getId, idCard }) => {
 								</div>
 
 								<div className={css.discribe__country}>
-									<b>{country.name}</b>
+									<b>{country.name}</b>{' '}
+									<div className={css.flagBlock}>
+										<img
+											src={arrCountry[index].flag}
+											alt=''
+											className={css.flagImg}
+										/>
+									</div>
 									<i>{country.cardImgDescribe}</i>
 								</div>
 							</>

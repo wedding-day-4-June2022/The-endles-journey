@@ -10,12 +10,20 @@ import { Route } from 'react-router-dom';
 import ListCountrys from './ui/ListCountrys/ListCountrys';
 import Main from './pages/Main';
 import Modal from './components/Modal/Modal';
+import ModalImg from './components/ModalImg/ModalImg';
 
-const App = ({ isAttraction }) => {
+const App = ({ isAttraction, idModalImg }) => {
 	return (
 		<div className='block'>
 			{isAttraction
 				? ReactDOM.createPortal(<Modal />, document.getElementById('portal'))
+				: null}
+
+			{idModalImg
+				? ReactDOM.createPortal(
+						<ModalImg />,
+						document.getElementById('portalImg')
+				  )
 				: null}
 
 			<Route exact path={'/'} component={Main} />
@@ -27,6 +35,7 @@ const App = ({ isAttraction }) => {
 const mapStateToProps = (state) => {
 	return {
 		isAttraction: state.cardReducer.isAttraction,
+		idModalImg: state.cardReducer.idModalImg,
 	};
 };
 const mapDispatchToProps = (dispatch) => {

@@ -1,4 +1,10 @@
-import { CARD, SITY, ATTRACTION, CITY_ATTRACTION } from './actionType';
+import {
+	CARD,
+	SITY,
+	ATTRACTION,
+	CITY_ATTRACTION,
+	MODAL_IMG,
+} from './actionType';
 
 export const getId = (num) => {
 	return {
@@ -21,6 +27,12 @@ export const getAttraction = (num) => {
 export const getSityAttraction = (num) => {
 	return {
 		type: CITY_ATTRACTION,
+		payload: num,
+	};
+};
+export const getIdModalImg = (num) => {
+	return {
+		type: MODAL_IMG,
 		payload: num,
 	};
 };

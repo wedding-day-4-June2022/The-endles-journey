@@ -40,6 +40,10 @@
 .discribe__country b {
 	font-size: 20px;
 	display: block;
+	position: relative;
+	height: 25%;
+	margin-top: 2%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .navLink {
@@ -88,8 +92,19 @@
 }
 .hoverEffect p {
 	color: rgb(143, 137, 131);
+	padding-top: 5%;
 }
-.hoverEffect p,
-.hoverEffect h2 {
-	font-family: 'Times New Roman', Times, serif;
+
+.flagBlock {
+	position: absolute;
+	top: 51%;
+	right: 5%;
+	width: 5vw;
+	height: 4vh;
+	box-shadow: 2px 2px 2px white;
+}
+
+.flagImg {
+	width: 100%;
+	height: 100%;
 }

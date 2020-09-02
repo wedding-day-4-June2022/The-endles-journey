@@ -18,45 +18,43 @@ function Modal({
 		document.body.style.overflow = 'auto';
 	};
 
-	console.log(
-		'modalSity',
-		modalSity[idCard].sities[idSity].attractions[idCityAttraction].modal
-	);
-	const modal =
-		modalSity[idCard].sities[idSity].attractions[idCityAttraction].modal;
-
+	const modal = modalSity[idCard].sities[idSity].attractions[idCityAttraction];
 	return (
 		<div className={css.blockAbsolute} onClick={closeModal}>
-			<img src={modal[0].imgDescribeSity} alt='' className={css.imgClose} />
+			<img
+				src={'https://emojio.ru/images/apple-b/274c.png'}
+				alt=''
+				className={css.imgClose}
+			/>
 			<div className={css.blockContent} onClick={(e) => e.stopPropagation()}>
 				<div className={css.blockOneFlex}>
 					<div className={css.blockImg}>
-						<img src={modal[0].imgDescribeSity} alt='' />
+						<img src={modal.modal[0].imgDescribeSity} alt='' />
 					</div>
 					<div className={css.blockP}>
-						<p>{modal[0].describeSity}</p>
+						<p>{modal.modal[0].describeSity}</p>
 					</div>
 				</div>
 
 				<div className={css.blockOneFlex}>
 					<div className={css.blockP}>
-						<p>{modal[1].describeSity}</p>
+						<p>{modal.modal[1].describeSity}</p>
 					</div>
 					<div className={css.blockImg}>
-						<img src={modal[1].imgDescribeSity} alt='' />
+						<img src={modal.modal[1].imgDescribeSity} alt='' />
 					</div>
 				</div>
 
 				<div className={css.blockOneFlex}>
 					<div className={css.blockImg}>
-						<img src={modal[2].imgDescribeSity} alt='' />
+						<img src={modal.modal[2].imgDescribeSity} alt='' />
 					</div>
 					<div className={css.blockP}>
-						<p>{modal[2].describeSity}</p>
+						<p>{modal.modal[2].describeSity}</p>
 					</div>
 				</div>
 				<h2>Больше картинок:</h2>
-				<Accordion />
+				<Accordion accordion={modal.accordion} />
 			</div>
 		</div>
 	);

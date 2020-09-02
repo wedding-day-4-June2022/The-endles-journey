@@ -1,10 +1,17 @@
-import { CARD, SITY, ATTRACTION, CITY_ATTRACTION } from '../actions/actionType';
+import {
+	CARD,
+	SITY,
+	ATTRACTION,
+	CITY_ATTRACTION,
+	MODAL_IMG,
+} from '../actions/actionType';
 
 const initialState = {
 	idCard: false,
 	idSity: false,
 	isAttraction: false,
 	idSityAttraction: false,
+	idModalImg: false,
 };
 
 export function cardReducer(state = initialState, action) {
@@ -15,6 +22,7 @@ export function cardReducer(state = initialState, action) {
 				idSity: state.idSity,
 				isAttraction: state.isAttraction,
 				idSityAttraction: state.idSityAttraction,
+				idModalImg: state.idModalImg,
 			};
 		case SITY:
 			return {
@@ -22,6 +30,7 @@ export function cardReducer(state = initialState, action) {
 				idCard: state.idCard,
 				isAttraction: state.isAttraction,
 				idSityAttraction: state.idSityAttraction,
+				idModalImg: state.idModalImg,
 			};
 		case ATTRACTION:
 			return {
@@ -29,6 +38,7 @@ export function cardReducer(state = initialState, action) {
 				idCard: state.idCard,
 				isAttraction: (state.isAttraction = action.payload),
 				idSityAttraction: state.idSityAttraction,
+				idModalImg: state.idModalImg,
 			};
 		case CITY_ATTRACTION:
 			return {
@@ -36,6 +46,15 @@ export function cardReducer(state = initialState, action) {
 				idCard: state.idCard,
 				isAttraction: state.isAttraction,
 				idSityAttraction: (state.idSityAttraction = action.payload),
+				idModalImg: state.idModalImg,
+			};
+		case MODAL_IMG:
+			return {
+				idSity: state.idSity,
+				idCard: state.idCard,
+				isAttraction: state.isAttraction,
+				idSityAttraction: state.idSityAttraction,
+				idModalImg: (state.idModalImg = action.payload),
 			};
 
 		default:
