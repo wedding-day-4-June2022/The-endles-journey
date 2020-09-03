@@ -13,6 +13,13 @@ import Modal from './components/Modal/Modal';
 import ModalImg from './components/ModalImg/ModalImg';
 
 const App = ({ isAttraction, idModalImg }) => {
+	// console.log(
+	// 	window.navigator.geolocation.getCurrentPosition((position) => {
+	// 		console.log(position.coords.latitude);
+	// 		console.log(position.coords.longitude);
+	// 	}),
+	// 	'window.location'
+	// );
 	return (
 		<div className='block'>
 			{isAttraction

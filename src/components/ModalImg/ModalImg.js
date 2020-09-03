@@ -14,14 +14,33 @@ function ModalImg({
 	idModalImg,
 }) {
 	const closeModal = (e) => {
-		closeFuncModalImg(false);
+		closeFuncModalImg(null);
 	};
 
 	const clickOnArrow = (e) => {
 		e.stopPropagation();
-
+		e.preventDefault();
 		if (e.target.id === 'left') {
-			console.log('hello');
+			console.log(idModalImg);
+			if (idModalImg == '0') {
+				closeFuncModalImg(
+					arrCountry[idCard].sities[idSity].attractions[idSityAttraction]
+						.accordion.length - 1
+				);
+			} else {
+				closeFuncModalImg(--idModalImg);
+			}
+		}
+		if (e.target.id === 'right') {
+			closeFuncModalImg(++idModalImg);
+
+			if (
+				idModalImg ==
+				arrCountry[idCard].sities[idSity].attractions[idSityAttraction]
+					.accordion.length
+			) {
+				closeFuncModalImg('0');
+			}
 		}
 	};
 
