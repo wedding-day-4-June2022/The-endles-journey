@@ -1,10 +1,21 @@
+import React from 'react';
+
 const initialState = [
 	{
 		name: 'Island',
 		cardImg: require('../../img/Island/Island.jpg'),
 		cardImgDescribe: 'Исландия страна льдов и океана',
-		map:
-			'<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29703456.155871086!2d-39.03360963365674!3d62.97396011617916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d22b52a3eb6043%3A0x6f8a0434e5c1459a!2z0JjRgdC70LDQvdC00LjRjw!5e0!3m2!1sru!2sby!4v1599045853399!5m2!1sru!2sby" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>',
+		mapOfCounty: `<iframe
+				src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7011216.232477233!2d-28.179117449263412!3d64.59444444560536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d22b52a3eb6043%3A0x6f8a0434e5c1459a!2z0JjRgdC70LDQvdC00LjRjw!5e0!3m2!1sru!2sby!4v1599321688554!5m2!1sru!2sby'
+				width='600'
+				height='450'
+				frameborder='0'
+				style='border:0;'
+				allowfullscreen=''
+				aria-hidden='false'
+				tabindex='0'
+			></iframe>`,
+
 		flag: require('../../img/Island/Flag.jpg'),
 		sities: [
 			{
@@ -14,7 +25,18 @@ const initialState = [
 						nameAttractions: 'Хадльгримскиркья',
 						describeAttraction:
 							'Хадльгримскиркья — лютеранская церковь в Рейкьявике, столице Исландии. Это здание — четвёртое по высоте здание в Исландии, после длинноволновой радиомачты Хеллисандур, Эйларского длинноволнового радиопередатчика и Смараторгской башни. Церковь названа в честь поэта и духовного лидера Хадльгримюра Пьетурссона, автора книги «Passion hymns».',
-						imgAttractions: require('../../img/Island/attractions/reykjavík/Хатльгримскиркья.jpg'),
+						imgAttractions:
+							'https://i.pinimg.com/originals/11/63/2e/11632e73f205293b70058e4b2fd2648f.jpg',
+						mapOfModal: `<iframe
+								src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1740.1269483631702!2d-21.928737983728595!3d64.14202288359316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674cca0432db5%3A0xf7af28c4489daaef!2z0KXQsNGC0LvRjNCz0YDQuNC80YHQutC40YDQutGM0Y8!5e0!3m2!1sru!2sby!4v1599321762867!5m2!1sru!2sby'
+								width='600'
+								height='450'
+								frameborder='0'
+								style='border:0;'
+								allowfullscreen=''
+								aria-hidden='false'
+								tabindex='0'
+							></iframe>`,
 						modal: [
 							{
 								describeSity:
@@ -47,6 +69,16 @@ const initialState = [
 						describeAttraction:
 							'«Харпа» — концертный зал и конференц-центр в Рейкьявике.',
 						imgAttractions: require('../../img/Island/attractions/reykjavík/Харпа.jpg'),
+						mapOfModal: `<iframe
+								src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1739.6022026819523!2d-21.934648984055443!3d64.15039662254047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674d3023a19c7%3A0xdbbf050da40f5d28!2zSGFycGFuLCAxMDEgUmV5a2phdsOtaywg0JjRgdC70LDQvdC00LjRjw!5e0!3m2!1sru!2sby!4v1599321868282!5m2!1sru!2sby'
+								width='600'
+								height='450'
+								frameborder='0'
+								style='border:0;'
+								allowfullscreen=''
+								aria-hidden='false'
+								tabindex='0'
+							></iframe>`,
 						modal: [
 							{
 								describeSity:

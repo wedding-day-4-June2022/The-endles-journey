@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { getAttraction } from '../../redux/actions/action';
 
 import Accordion from '../../ui/Accordion/Accordion';
+import Map from '../../ui/Map/Map';
 
 function Modal({
 	isAttractionFunc,
@@ -13,6 +14,8 @@ function Modal({
 	idSity,
 	idCityAttraction,
 }) {
+	console.log(modalSity[idCard].mapOfCounty, 'modalSity[idCard].mapOfCounty');
+
 	const closeModal = (e) => {
 		isAttractionFunc(false);
 		document.body.style.overflow = 'auto';
@@ -55,6 +58,7 @@ function Modal({
 				</div>
 				<h2>Больше картинок:</h2>
 				<Accordion accordion={modal.accordion} />
+				<Map />
 			</div>
 		</div>
 	);

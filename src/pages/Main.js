@@ -6,6 +6,7 @@ import Converter from '../ui/Converter/Converter';
 import CountryDescription from '../ui/CountryDiscribtion/CountryDescription';
 
 import { connect } from 'react-redux';
+import Map from '../ui/Map/Map';
 
 function Main({ idCard }) {
 	return (
@@ -14,6 +15,7 @@ function Main({ idCard }) {
 			<Video />
 			{idCard ? <CountryDescription key={Math.random()} /> : null}
 			{idCard ? <Converter /> : null}
+			{idCard ? <Map /> : null}
 		</div>
 	);
 }

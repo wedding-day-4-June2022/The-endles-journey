@@ -10,7 +10,6 @@ function Converter() {
 				backgroundImage:
 					'url(https://storge.pic2.me/c/1360x800/299/5a9ee783c3f3a.jpg)',
 			}}
-			id='about'
 		></div>
 	);
 }

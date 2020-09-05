@@ -36,7 +36,7 @@ function Header({ idCard }) {
 					{idCard ? 'Города в "Исландия"' : 'Города в "?"'}
 				</a>
 				<a href='#about' className={idCard ? css.default : css.noActive}>
-					Конвертер валют
+					Карта
 				</a>
 			</div>
 		</div>
