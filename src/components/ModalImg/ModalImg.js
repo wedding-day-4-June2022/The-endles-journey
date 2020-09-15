@@ -21,21 +21,20 @@ function ModalImg({
 		e.stopPropagation();
 		e.preventDefault();
 		if (e.target.id === 'left') {
-			console.log(idModalImg);
-			if (idModalImg == '0') {
+			if (idModalImg === '0') {
+				console.log(parseInt(idModalImg), 'parseInt(idModalImg)');
 				closeFuncModalImg(
 					arrCountry[idCard].sities[idSity].attractions[idSityAttraction]
 						.accordion.length - 1
 				);
 			} else {
-				closeFuncModalImg(--idModalImg);
+				closeFuncModalImg(idModalImg - 1);
 			}
 		}
 		if (e.target.id === 'right') {
 			closeFuncModalImg(++idModalImg);
-
 			if (
-				idModalImg ==
+				idModalImg ===
 				arrCountry[idCard].sities[idSity].attractions[idSityAttraction]
 					.accordion.length
 			) {

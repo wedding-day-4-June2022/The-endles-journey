@@ -8,11 +8,25 @@
 .card {
 	width: 21vw;
 	height: 36vh;
-	background-color: green;
+	background-color: rgb(124, 138, 124);
 	margin: 1%;
 	display: flex;
 	position: relative;
-	overflow: hidden;
+
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+
+.card:hover {
+	box-shadow: 3px 3px 5px black, -3px -3px 5px black;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
 }
 .card__Img img {
 	width: 100%;

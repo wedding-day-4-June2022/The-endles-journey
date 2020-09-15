@@ -8,6 +8,8 @@ import {
 	getSityAttraction,
 } from '../../redux/actions/action';
 
+import { useSpring, animated } from 'react-spring';
+
 function CountryDescription({
 	arrCountry,
 	idCard,
@@ -20,7 +22,11 @@ function CountryDescription({
 		getIdSity(e.target.id);
 	};
 
+	const props = useSpring({ opacity: 1, from: { opacity: 0 } });
+
 	const changeAttractionFunc = (e) => {
+		e.stopPropagation();
+		console.log(e.target);
 		isAttractionFunc(e.target.id);
 		getIdCityAttraction(e.target.id);
 		document.body.style.overflow = 'hidden';
@@ -49,25 +55,27 @@ function CountryDescription({
 				{idSity ? (
 					arrCountry[idCard].sities[idSity].attractions.map((cities, index) => {
 						return (
-							<div
-								className={css.blockImgDesc}
-								key={Math.random() + Math.random()}
-								onClick={changeAttractionFunc}
-							>
-								<div className={css.oneBlockImg}>
-									<div className={css.blockImg} id={index}>
-										<img src={cities.imgAttractions} alt='' id={index} />
-									</div>
-									<div className={css.blockP}>
-										<p className={css.nameAttraction} id={index}>
-											{cities.nameAttractions}
-										</p>
-										<p className={css.describeAttraction} id={index}>
-											{cities.describeAttraction}
-										</p>
+							<animated.div style={props}>
+								<div
+									className={css.blockImgDesc}
+									key={Math.random() + Math.random()}
+									onClick={changeAttractionFunc}
+								>
+									<div className={css.oneBlockImg}>
+										<div className={css.blockImg} id={index}>
+											<img src={cities.imgAttractions} alt='' id={index} />
+										</div>
+										<div className={css.blockP}>
+											<p className={css.nameAttraction} id={index}>
+												{cities.nameAttractions}
+											</p>
+											<p className={css.describeAttraction} id={index}>
+												{cities.describeAttraction}
+											</p>
+										</div>
 									</div>
 								</div>
-							</div>
+							</animated.div>
 						);
 					})
 				) : (

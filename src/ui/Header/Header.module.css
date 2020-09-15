@@ -64,6 +64,7 @@
 }
 
 .default {
+	position: relative;
 	text-align: center;
 	text-decoration: none;
 	font-weight: 700;
@@ -106,6 +107,7 @@
 }
 
 .noActive {
+	position: relative;
 	pointer-events: none;
 	cursor: default;
 	color: rgb(109, 107, 107);
