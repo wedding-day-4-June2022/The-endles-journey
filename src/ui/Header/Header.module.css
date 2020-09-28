@@ -71,7 +71,7 @@
 	font-size: 20px;
 	width: 15%;
 	height: 100%;
-	color: rgb(39, 133, 89);
+	color: rgb(248, 248, 248);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -80,7 +80,10 @@
 	-moz-transition: 1s;
 	-ms-transition: 1s;
 	-o-transition: 1s;
-	text-shadow: 3px 3px 10px rgb(219, 213, 213);
+	text-shadow: 3px 3px 10px rgb(48, 45, 45);
+}
+.default:hover {
+	color: grey;
 }
 
 /* .ref a {
@@ -93,6 +96,8 @@
 	-ms-transition: 0.5s;
 	-o-transition: 0.5s;
 	background-color: #fff;
+	color: grey;
+	text-shadow: 2px 2px 3px black;
 }
 
 .blockLogo {

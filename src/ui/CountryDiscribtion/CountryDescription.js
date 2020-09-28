@@ -28,7 +28,9 @@ function CountryDescription({
 		e.stopPropagation();
 		console.log(e.target);
 		isAttractionFunc(e.target.id);
+
 		getIdCityAttraction(e.target.id);
+
 		document.body.style.overflow = 'hidden';
 	};
 
@@ -38,14 +40,17 @@ function CountryDescription({
 				<div className={css.cityCss}>
 					{arrCountry[idCard].sities.map((cityName, index) => {
 						return (
-							<div
-								key={index}
-								onClick={clickOnSity}
-								id={index}
-								className={css.cityNameCss}
-							>
-								{cityName.name}
-							</div>
+							<>
+								<div
+									data-title={cityName.title}
+									key={index}
+									onClick={clickOnSity}
+									id={index}
+									className={css.cityNameCss}
+								>
+									{cityName.name}
+								</div>
+							</>
 						);
 					})}
 				</div>

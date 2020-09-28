@@ -30,28 +30,28 @@ function Modal({
 			<div className={css.blockContent} onClick={(e) => e.stopPropagation()}>
 				<div className={css.blockOneFlex}>
 					<div className={css.blockImg}>
-						<img src={modal.modal[0].imgDescribeSity} alt='' />
+						<img src={modal.modal[0].imgDescribeAttraction} alt='' />
 					</div>
 					<div className={css.blockP}>
-						<p>{modal.modal[0].describeSity}</p>
+						<p>{modal.modal[0].describeAttraction}</p>
 					</div>
 				</div>
 
 				<div className={css.blockOneFlex}>
 					<div className={css.blockP}>
-						<p>{modal.modal[1].describeSity}</p>
+						<p>{modal.modal[1].describeAttraction}</p>
 					</div>
 					<div className={css.blockImg}>
-						<img src={modal.modal[1].imgDescribeSity} alt='' />
+						<img src={modal.modal[1].imgDescribeAttraction} alt='' />
 					</div>
 				</div>
 
 				<div className={css.blockOneFlex}>
 					<div className={css.blockImg}>
-						<img src={modal.modal[2].imgDescribeSity} alt='' />
+						<img src={modal.modal[2].imgDescribeAttraction} alt='' />
 					</div>
 					<div className={css.blockP}>
-						<p>{modal.modal[2].describeSity}</p>
+						<p>{modal.modal[2].describeAttraction}</p>
 					</div>
 				</div>
 				<h2>Больше картинок:</h2>
