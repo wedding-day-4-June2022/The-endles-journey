@@ -255,7 +255,7 @@ const initialState = [
 						describeAttraction:
 							'Лютеранская церковь в городе Акюрейри на севере Исландии.',
 						imgAttractions:
-							'https://lh3.googleusercontent.com/proxy/Tmlydp0PC1ks3KO-VjgMF2gGy2TBO518zOGFzmpP6s8TL1JB89TcjrpyP5gtf0Uv0RRAKNYgWRdWZ0MjWy14D3f5m1ZEKDbJz-YD0vlr667iSEGKp5OW7XBFMzHGDvMxPpIqQZiDB44m8xMuBzUlHj066GC-0Sr0nQ',
+							'https://planetofhotels.com/sites/default/files/atttaction-images/7804002.jpg',
 
 						mapOfModal: (
 							<iframe
@@ -289,7 +289,7 @@ const initialState = [
 							'https://planetofhotels.com/sites/default/files/atttaction-images/4076554.jpg',
 							'https://planetofhotels.com/sites/default/files/atttaction-images/7804002.jpg',
 							'https://vpoisketurov.ru/800/600/http/www.openarium.ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B8%D1%81%D0%BB%D0%B0%D0%BD%D0%B4%D0%B8%D1%8F/%D1%81%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%B8%D1%81%D0%BB%D0%B0%D0%BD%D0%B4%D0%B8%D1%8F/%D1%86%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C-%D0%B0%D0%BA%D1%83%D1%80%D0%B5%D0%B9%D1%80%D0%B0%D0%BA%D0%B8%D1%80%D0%BA%D1%8C%D1%8F.jpg',
-							'https://lh3.googleusercontent.com/proxy/QeCsTbeT_C4omIXdtnk5nCuh3Btv_aETNJ-hby8wIIm1mT0NSVGNzrSyWee8P2iVZd7w7GcJGjahHbFknpKW0jpd0QyrWNHXfC61KukXBZpvnp_HRNCdtV7DSz7rMgi4tAsznFju48rphnYCGsydyAPfY3eUyqLtTl6SM6txl-7qcyJKdUb_LkdIl3YH_nC3seMUXuh0XmI1Abkx7l9wB2aAlaFn8gqL8UcluGlGBC8jBq4ZB1QLmtzWf-MXqE-wSaCLGt7xUe_5wQpyr6fm24EeuVWvLpWuzP3wIWyf4KxNBWLdk-QEHER8B9LlsOpaH0HZ3KC756xEla4drCO47YiQUfkQmvPdksquHzXtU-S0sMiklkFsGCrZVCs5NKvUnpmPZvNEf21gCV-qehQGpLQ3511Pp_9vVHxu_A',
+							'https://sun1-17.userapi.com/c830400/v830400532/14b073/TGg0RzIW5og.jpg',
 							'https://planetofhotels.com/sites/default/files/atttaction-images/4076566.jpg',
 							'https://planetofhotels.com/sites/default/files/atttaction-images/76937996.jpg',
 						],
@@ -338,7 +338,51 @@ const initialState = [
 							'https://pokatashkin.com/wp-content/uploads/2013/04/cafe_botanical_gardens_4.jpg',
 							'https://incomartour.com.ua/mediafiles/images/places/20181210164035/botanicalakureyri%20(16).jpg',
 						],
-					},
+					}, //Ботанический сад Акюрейри
+					{
+						nameAttractions: 'Водопад Годафосс',
+						describeAttraction:
+							'Годафосс — один из самых известных водопадов Исландии, в регионе Нордюрланд-Эйстра. Находится на севере острова недалеко от Акюрейри, на реке Скьяульвандафльоут.',
+						imgAttractions:
+							'https://lh3.googleusercontent.com/proxy/eXv_o6ghftulMTIoTFwGfORUPEpAZrZtS9J72XmvvpiC61LMqChzvlrcbf9Ll0HVLYzY7kCU_AiNV4wF-OhnqKdXjJmkclCnQVRjLKdlKNpaADU2DmyHcDuk_r4e',
+
+						mapOfModal: (
+							<iframe
+								src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.9156058956464!2d-17.55470536953687!3d65.68281993725216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48cd7e6a481f369f%3A0x7ebbcdaa4e0d1d3b!2z0JPQvtC00LDRhNC-0YHRgQ!5e0!3m2!1sru!2sby!4v1601366084929!5m2!1sru!2sby'
+								title={new Date().getMilliseconds()}
+								aria-hidden='false'
+							></iframe>
+						),
+						modal: [
+							{
+								describeAttraction:
+									'На севере Исландии недалеко от Акюрейри, на реке Скьяульфандафльоут, что можно перевести как «река с дрожащим дыханием», находится один из знаменитый водопадов Исландии - Годафосс, «водопад Бога». Когда-то вокруг него возвышались фигурки языческих богов Скандинавии: Одина, Тора, Локи и других. Но позже, когда на полях Тинга было принято решение о переходе в христианство, прежние боги были повержены в пучину водопада. В честь какого бога носит своё имя Годафосс теперь точно сказать трудно. Но нет сомнения, что это «водопад Бога», так он могуч, величественен и красив.',
+								imgDescribeAttraction:
+									'https://img.lookmytrips.com/images/look7lkv/big-5742b7eeff936723fb0565b4-59c5094244ceb-1csa2a2.jpg',
+							},
+							{
+								describeAttraction:
+									'Годафосс - не самый высокий водопад Исландии, всего 12 м высотой и шириной около 30 м. Он имеет форму полумесяца и посередине разделён на два почти равных потока, между которыми две базальтовые колонны создают каменное русло для ещё одного узкого и наиболее интенсивного центрального потока.',
+								imgDescribeAttraction:
+									'https://planetofhotels.com/sites/default/files/atttaction-images/58088117.jpg',
+							},
+							{
+								describeAttraction:
+									'Водопад изумляет своей хрустальной чистотой и буйством красок окружающего ландшафта. Облако брызг вокруг него делает его заметным издалека. А в холодную зиму ниспадающие потоки воды замерзают, не достигнув дна, и всё вокруг превращается в заколдованное зимнее царство.',
+								imgDescribeAttraction:
+									'https://image.freepik.com/free-photo/_31965-5578.jpg',
+							},
+						],
+						accordion: [
+							'https://viking-travel.ru/files/12347/YgcEX5JxXr0DmvfDGp8I37CnTtdm3lC6.jpg',
+							'https://vislandii.ru/images/attractions/godafoss/godafoss-iceland_03.JPG',
+							'https://i2.wp.com/fountravel.ru/wp-content/uploads/2018/12/Go-afoss-Iceland-8.jpg?resize=702%2C486&ssl=1',
+							'https://zakharkiv-travel.ru/wp-content/uploads/2020/05/%D0%B2%D0%BE%D0%B4%D0%BE%D0%BF%D0%B0%D0%B4-%D0%B3%D0%BE%D0%B4%D0%B0%D1%84%D0%BE%D1%81%D1%81-%D0%B7%D0%B8%D0%BC%D0%BE%D0%B9.jpg',
+							'https://avatars.mds.yandex.net/get-zen_doc/1899873/pub_5d98c5a50a451800b092d300_5d98cfb56d29c100ade3a410/scale_1200',
+							'https://theplanetsworld.com/bucket-list/11-top-waterfalls-in-iceland-4.jpg',
+							'https://wikiway.com/upload/resize_cache/iblock/6f8/1024_420_1/Vodopad-Godafoss.jpg',
+						],
+					}, //Водопад Годафосс
 				],
 			}, // Акурейри
 		],

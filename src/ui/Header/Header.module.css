@@ -1,12 +1,11 @@
 .block {
-	background-color: rgba(0, 0, 0, 0.2);
 	width: 100%;
 	height: 10vh;
 	position: fixed;
 	z-index: 9;
 }
 .blockBottom {
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(15, 186, 255, 0.8);
 	width: 100%;
 	height: 8vh;
 	position: fixed;
@@ -24,6 +23,10 @@
 	-moz-transition: 0.5s;
 	-ms-transition: 0.5s;
 	-o-transition: 0.5s;
+	background: linear-gradient(
+		rgba(168, 238, 255, 0.8),
+		rgba(88, 190, 230, 0.8)
+	);
 }
 .nav a {
 	text-decoration: none;
@@ -47,7 +50,7 @@
 	-moz-transition: 0.5s;
 	-ms-transition: 0.5s;
 	-o-transition: 0.5s;
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
 .ref {
@@ -56,7 +59,10 @@
 	-moz-transition: 0.5s;
 	-ms-transition: 0.5s;
 	-o-transition: 0.5s;
-	background-color: rgba(0, 0, 0, 0.8);
+	background: linear-gradient(
+		rgba(168, 238, 255, 0.8),
+		rgba(88, 190, 230, 0.8)
+	);
 	height: 8vh;
 	display: flex;
 	justify-content: space-around;
@@ -83,12 +89,15 @@
 	text-shadow: 3px 3px 10px rgb(48, 45, 45);
 }
 .default:hover {
-	color: grey;
+	color: rgb(248, 248, 248);
 }
 
 /* .ref a {
 } */
 
+.ref a {
+	position: relative;
+}
 .ref a:hover {
 	transition: 0.5s;
 	-webkit-transition: 0.5s;
@@ -98,6 +107,11 @@
 	background-color: #fff;
 	color: grey;
 	text-shadow: 2px 2px 3px black;
+}
+
+.ref a:hover::after {
+	content: '';
+	position: absolute;
 }
 
 .blockLogo {

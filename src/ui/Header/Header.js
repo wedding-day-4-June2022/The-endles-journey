@@ -22,7 +22,7 @@ function Header({ idCard }) {
 		<div className={bool ? css.blockBottom : css.block}>
 			<div className={bool ? css.ref : css.nav}>
 				<div className={css.blockLogo}>
-					<img src={logo} alt='' className={css.logo} />
+					<p className={css.logo}>LOGO</p>
 				</div>
 
 				<a href='#home' className={idCard ? css.default : css.noActive}>

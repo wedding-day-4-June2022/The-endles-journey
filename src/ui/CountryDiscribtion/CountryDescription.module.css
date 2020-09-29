@@ -5,28 +5,22 @@
 	justify-content: space-around;
 	align-items: center;
 	position: relative;
+	background-color: #f4efd9;
+	background-color: rgba(15, 186, 255, 0.2);
 }
 
 .countrys {
 	width: 40vw;
 	height: 70vh;
-	background-color: yellow;
-	border-radius: 10%;
-	-webkit-border-radius: 10%;
-	-moz-border-radius: 10%;
-	-ms-border-radius: 10%;
-	-o-border-radius: 10%;
+	/* background-color: rgba(15, 186, 255, 0.2); */
 }
 
 .imgDescription {
-	background-color: slategray;
+	/* background-color: slategray; */
 	width: 50vw;
 	height: 80vh;
-	border-radius: 10%;
-	-webkit-border-radius: 10%;
-	-moz-border-radius: 10%;
-	-ms-border-radius: 10%;
-	-o-border-radius: 10%;
+	box-shadow: 3px 3px 5px black;
+
 	padding: 1%;
 	overflow: auto;
 }
@@ -45,19 +39,20 @@
 } */
 
 .cityCss div {
-	border: 1px solid red;
-
+	background: linear-gradient(#6bebeb, #9198e5);
 	width: 22%;
 	min-width: 22%;
 	height: 7vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-radius: 20%;
-	-webkit-border-radius: 20%;
-	-moz-border-radius: 20%;
-	-ms-border-radius: 20%;
-	-o-border-radius: 20%;
+}
+.cityCss div:hover {
+	box-shadow: inset 3px 3px 5px white, -3px -3px -5px white;
+}
+
+.cityCss div:active {
+	background: linear-gradient(#54e0e0, #7f87df);
 }
 
 .blockImgDesc {
@@ -76,7 +71,7 @@
 	-o-transition: 0.3s;
 }
 .blockImgDesc:hover {
-	box-shadow: 6px 6px 9px rgb(9, 248, 69), -6px -6px 9px rgb(9, 248, 69);
+	box-shadow: inset #6bebeb 0 0 40px 10px, #6bebeb 0 0 24px 12px;
 	transition: 0.3s;
 	-webkit-transition: 0.3s;
 	-moz-transition: 0.3s;
@@ -177,9 +172,9 @@
 	margin: 0 auto;
 }
 
-.describeAttraction {
+.blockP .describeAttraction {
 	font-weight: 550;
-	display: block;
+	height: 13vh;
 	width: 100%;
 	margin: 0;
 }
@@ -192,7 +187,7 @@
 [data-title]:after {
 	content: attr(data-title);
 	color: #fff;
-	background: linear-gradient(#a08c8c, #8487a8);
+	background: linear-gradient(#e66465, #9198e5);
 	padding: 23%;
 	text-align: center;
 	text-shadow: 1px 1px 3px black;
