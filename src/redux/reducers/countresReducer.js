@@ -246,9 +246,9 @@ const initialState = [
 			}, // Рейкявик
 
 			{
-				name: 'Акурейри',
+				name: 'Акюрейри',
 				title:
-					'Городок, расположенный на далеком севере Исландии — Акурейри, разместился у подножия фьорда Эйя-фьорд, между горными грядами. Климат, благодаря такому положению местности, здесь более напоминает континентальный, нежели прибрежный.',
+					'Городок, расположенный на далеком севере Исландии — Акюрейри, разместился у подножия фьорда Эйя-фьорд, между горными грядами. Климат, благодаря такому положению местности, здесь более напоминает континентальный, нежели прибрежный.',
 				attractions: [
 					{
 						nameAttractions: 'Церковь Акюрейри',
@@ -344,7 +344,7 @@ const initialState = [
 						describeAttraction:
 							'Годафосс — один из самых известных водопадов Исландии, в регионе Нордюрланд-Эйстра. Находится на севере острова недалеко от Акюрейри, на реке Скьяульвандафльоут.',
 						imgAttractions:
-							'https://lh3.googleusercontent.com/proxy/eXv_o6ghftulMTIoTFwGfORUPEpAZrZtS9J72XmvvpiC61LMqChzvlrcbf9Ll0HVLYzY7kCU_AiNV4wF-OhnqKdXjJmkclCnQVRjLKdlKNpaADU2DmyHcDuk_r4e',
+							'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Go%C3%B0afoss_Island.jpg/1200px-Go%C3%B0afoss_Island.jpg',
 
 						mapOfModal: (
 							<iframe

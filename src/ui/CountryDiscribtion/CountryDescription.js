@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import css from './CountryDescription.module.css';
 import { connect } from 'react-redux';
@@ -8,7 +8,7 @@ import {
 	getSityAttraction,
 } from '../../redux/actions/action';
 
-import { useSpring, animated } from 'react-spring';
+import { Spring } from 'react-spring/renderprops';
 
 function CountryDescription({
 	arrCountry,
@@ -18,11 +18,19 @@ function CountryDescription({
 	isAttractionFunc,
 	getIdCityAttraction,
 }) {
+	const [scroll, setScroll] = useState(false);
+
 	const clickOnSity = (e) => {
 		getIdSity(e.target.id);
 	};
-
-	const props = useSpring({ opacity: 1, from: { opacity: 0 } });
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > (document.documentElement.clientHeight / 4) * 2) {
+			setScroll(true);
+		}
+		if (window.scrollY < (document.documentElement.clientHeight / 4) * 2) {
+			setScroll(false);
+		}
+	});
 
 	const changeAttractionFunc = (e) => {
 		e.stopPropagation();
@@ -41,15 +49,30 @@ function CountryDescription({
 					{arrCountry[idCard].sities.map((cityName, index) => {
 						return (
 							<>
-								<div
-									data-title={cityName.title}
-									key={index}
-									onClick={clickOnSity}
-									id={index}
-									className={css.cityNameCss}
-								>
-									{cityName.name}
-								</div>
+								{scroll ? (
+									<Spring
+										from={{ opasity: 0 }}
+										to={{ opasity: 1 }}
+										reset={true}
+										reverse={scroll}
+										config={{ duration: '2000' }}
+									>
+										{(props) => {
+											return (
+												<div
+													style={props}
+													data-title={cityName.title}
+													key={index}
+													onClick={clickOnSity}
+													id={index}
+													className={css.cityNameCss}
+												>
+													{cityName.name}
+												</div>
+											);
+										}}
+									</Spring>
+								) : null}
 							</>
 						);
 					})}
@@ -60,27 +83,25 @@ function CountryDescription({
 				{idSity ? (
 					arrCountry[idCard].sities[idSity].attractions.map((cities, index) => {
 						return (
-							<animated.div style={props}>
-								<div
-									className={css.blockImgDesc}
-									key={Math.random() + Math.random()}
-									onClick={changeAttractionFunc}
-								>
-									<div className={css.oneBlockImg}>
-										<div className={css.blockImg} id={index}>
-											<img src={cities.imgAttractions} alt='' id={index} />
-										</div>
-										<div className={css.blockP}>
-											<p className={css.nameAttraction} id={index}>
-												{cities.nameAttractions}
-											</p>
-											<p className={css.describeAttraction} id={index}>
-												{cities.describeAttraction}
-											</p>
-										</div>
+							<div
+								className={css.blockImgDesc}
+								key={Math.random() + Math.random()}
+								onClick={changeAttractionFunc}
+							>
+								<div className={css.oneBlockImg}>
+									<div className={css.blockImg} id={index}>
+										<img src={cities.imgAttractions} alt='' id={index} />
+									</div>
+									<div className={css.blockP}>
+										<p className={css.nameAttraction} id={index}>
+											{cities.nameAttractions}
+										</p>
+										<p className={css.describeAttraction} id={index}>
+											{cities.describeAttraction}
+										</p>
 									</div>
 								</div>
-							</animated.div>
+							</div>
 						);
 					})
 				) : (
