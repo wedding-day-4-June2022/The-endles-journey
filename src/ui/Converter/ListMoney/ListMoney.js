@@ -27,8 +27,8 @@ function ListMoney() {
 					/>
 				</div>
 				<ul className={bool ? css.ulBlockShow : css.ulBlockHide}>
-					{arr.map((el) => {
-						return <li>{el}</li>;
+					{arr.map((el, index) => {
+						return <li key={index}>{el}</li>;
 					})}
 				</ul>
 			</div>

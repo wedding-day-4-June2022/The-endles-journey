@@ -5,38 +5,18 @@ import css from './Header.module.css';
 
 import { connect } from 'react-redux';
 
+import { Link } from 'react-scroll';
+
 function Header({ idCard }) {
 	const [bool, setBool] = useState(false);
-	const [hash, setHash] = useState(window.location.hash);
-	const [activeUrl, setActiveUrl] = useState('#home');
-	// let res = document.documentElement.clientHeight * 1.5;
 
-	window.addEventListener('scroll', (e) => {
+	window.addEventListener('scroll', () => {
 		if (window.scrollY > (document.documentElement.clientHeight / 10) * 9) {
 			setBool(true);
-			setActiveUrl('#list');
-		}
-		if (window.scrollY < (document.documentElement.clientHeight / 10) * 9) {
+		} else {
 			setBool(false);
-			setActiveUrl('#home');
 		}
-		// if (window.scrollY > res) {
-		// 	setActiveUrl('#about');
-		// 	// setBool(false);
-		// }
 	});
-
-	const func = (e) => {
-		if (e.target.getAttribute('href') === '#home') {
-			setActiveUrl(e.target.getAttribute('href'));
-		}
-		if (e.target.getAttribute('href') === '#list') {
-			setActiveUrl(e.target.getAttribute('href'));
-		}
-		if (e.target.getAttribute('href') === '#about') {
-			setActiveUrl(e.target.getAttribute('href'));
-		}
-	};
 
 	return (
 		<div className={bool ? css.blockBottom : css.block}>
@@ -45,49 +25,54 @@ function Header({ idCard }) {
 					<p className={css.logo}>LOGO</p>
 				</div>
 
-				<a
-					href='#home'
-					className={
-						idCard
-							? activeUrl === '#home'
-								? css.activeUrl
-								: css.default
-							: css.noActive
-					}
-					onClick={func}
-				>
-					Домой
-				</a>
+				{bool ? (
+					<Link
+						activeClass='active'
+						duration={50}
+						to='home'
+						className={idCard ? css.default : css.noActive}
+						spy={true}
+						smooth={true}
+					>
+						Домой
+					</Link>
+				) : null}
 
-				<NavLink to='/allCountrys' className={css.default} onClick={func}>
+				<NavLink className={css.default} to='/allCountrys'>
 					Все страны
 				</NavLink>
-				<a
-					href='#list'
-					className={
-						idCard
-							? activeUrl === '#list'
-								? css.activeUrl
-								: css.default
-							: css.noActive
-					}
-					onClick={func}
+
+				<Link
+					activeClass='active'
+					duration={50}
+					to='listCountru'
+					className={idCard ? css.default : css.noActive}
+					spy={true}
+					smooth={true}
 				>
 					{idCard ? 'Города в "Исландия"' : 'Города в "?"'}
-				</a>
-				<a
-					href='#about'
-					className={
-						idCard
-							? activeUrl === '#about'
-								? css.activeUrl
-								: css.default
-							: css.noActive
-					}
-					onClick={func}
+				</Link>
+
+				<Link
+					activeClass='active'
+					duration={50}
+					to='conv'
+					className={idCard ? css.default : css.noActive}
+					spy={true}
+					smooth={true}
+				>
+					Конвертер
+				</Link>
+				<Link
+					activeClass='active'
+					duration={50}
+					to='map'
+					className={idCard ? css.default : css.noActive}
+					spy={true}
+					smooth={true}
 				>
 					Карта
-				</a>
+				</Link>
 			</div>
 		</div>
 	);

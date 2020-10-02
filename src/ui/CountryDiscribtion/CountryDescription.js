@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import css from './CountryDescription.module.css';
 import { connect } from 'react-redux';
@@ -8,8 +8,6 @@ import {
 	getSityAttraction,
 } from '../../redux/actions/action';
 
-import { Spring } from 'react-spring/renderprops';
-
 function CountryDescription({
 	arrCountry,
 	idCard,
@@ -18,19 +16,9 @@ function CountryDescription({
 	isAttractionFunc,
 	getIdCityAttraction,
 }) {
-	const [scroll, setScroll] = useState(false);
-
 	const clickOnSity = (e) => {
 		getIdSity(e.target.id);
 	};
-	window.addEventListener('scroll', () => {
-		if (window.scrollY > (document.documentElement.clientHeight / 4) * 2) {
-			setScroll(true);
-		}
-		if (window.scrollY < (document.documentElement.clientHeight / 4) * 2) {
-			setScroll(false);
-		}
-	});
 
 	const changeAttractionFunc = (e) => {
 		e.stopPropagation();
@@ -43,37 +31,20 @@ function CountryDescription({
 	};
 
 	return (
-		<div className={css.block} id='list'>
+		<div className={css.block} id='listCountru'>
 			<div className={css.countrys}>
 				<div className={css.cityCss}>
 					{arrCountry[idCard].sities.map((cityName, index) => {
 						return (
-							<>
-								{scroll ? (
-									<Spring
-										from={{ opasity: 0 }}
-										to={{ opasity: 1 }}
-										reset={true}
-										reverse={scroll}
-										config={{ duration: '2000' }}
-									>
-										{(props) => {
-											return (
-												<div
-													style={props}
-													data-title={cityName.title}
-													key={index}
-													onClick={clickOnSity}
-													id={index}
-													className={css.cityNameCss}
-												>
-													{cityName.name}
-												</div>
-											);
-										}}
-									</Spring>
-								) : null}
-							</>
+							<div
+								data-title={cityName.title}
+								key={index + 'hey'}
+								onClick={clickOnSity}
+								id={index}
+								className={css.cityNameCss}
+							>
+								{cityName.name}
+							</div>
 						);
 					})}
 				</div>

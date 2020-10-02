@@ -7,7 +7,7 @@ const Map = ({ mapOfModal, mapOfCounty }) => {
 		return <div className={css.modalMap}>{mapOfModal}</div>;
 	} else {
 		return (
-			<div className={css.block} id='about'>
+			<div className={css.block} id='map'>
 				{mapOfCounty}
 			</div>
 		);
