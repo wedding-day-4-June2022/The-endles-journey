@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Header from '../ui/Header/Header';
+import HeaderMain from '../ui/HeaderMain/HeaderMain';
 import Video from '../ui/Video/Video';
 import Converter from '../ui/Converter/Converter';
 import CountryDescription from '../ui/CountryDiscribtion/CountryDescription';
@@ -11,7 +11,7 @@ import Map from '../ui/Map/Map';
 function Main({ idCard, mapOfCountyArr }) {
 	return (
 		<div>
-			<Header />
+			<HeaderMain />
 			<Video />
 			{idCard ? <CountryDescription key={Math.random()} /> : null}
 			{idCard ? <Converter /> : null}

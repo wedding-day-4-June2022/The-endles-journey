@@ -70,6 +70,7 @@
 }
 
 .default {
+	cursor: pointer;
 	position: relative;
 	text-align: center;
 	text-decoration: none;
@@ -127,6 +128,7 @@
 	cursor: default;
 	color: rgb(109, 107, 107);
 	background-color: rgba(39, 39, 39, 0.3);
+	cursor: pointer;
 }
 
 .activeUrl {

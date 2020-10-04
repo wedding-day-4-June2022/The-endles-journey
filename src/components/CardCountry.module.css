@@ -1,8 +1,9 @@
 .cardBlock {
 	display: flex;
 	justify-content: center;
-	background-color: grey;
-	padding-top: 1%;
+	background-color: rgb(216, 209, 209);
+	padding-top: 10vh;
+	height: 90vh;
 }
 
 .card {

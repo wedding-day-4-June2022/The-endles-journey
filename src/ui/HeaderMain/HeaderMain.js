@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import css from './Header.module.css';
+import css from './HeaderMain.module.css';
 
 import { connect } from 'react-redux';
 
 import { Link } from 'react-scroll';
 
-function Header({ idCard }) {
+function HeaderMain({ idCard }) {
 	const [bool, setBool] = useState(false);
 
 	window.addEventListener('scroll', () => {
@@ -84,4 +84,4 @@ const mapStateToProps = (state) => {
 	};
 };
 
-export default connect(mapStateToProps, null)(Header);
+export default connect(mapStateToProps, null)(HeaderMain);
