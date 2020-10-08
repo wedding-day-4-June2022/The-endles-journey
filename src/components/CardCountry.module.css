@@ -1,9 +1,26 @@
+.pageBlock {
+	height: 100%;
+	background-color: rgb(216, 209, 209);
+}
+
+.pageBlock h3 {
+	width: 30vw;
+	margin: 0 auto;
+	border-bottom: 1px solid red;
+	font-weight: 800;
+	font-size: 30px;
+	height: 15vh;
+	padding: 2vh 0 2vh 0;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
 .cardBlock {
 	display: flex;
 	justify-content: center;
-	background-color: rgb(216, 209, 209);
-	padding-top: 10vh;
-	height: 90vh;
+	height: 100vh;
+	padding-top: 1vh;
 }
 
 .card {
@@ -122,4 +139,9 @@
 .flagImg {
 	width: 100%;
 	height: 100%;
+}
+
+.euro {
+	width: 100%;
+	height: 100vh;
 }

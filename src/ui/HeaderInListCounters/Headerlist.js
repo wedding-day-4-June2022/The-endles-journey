@@ -4,51 +4,61 @@ import { Link } from 'react-scroll';
 import { NavLink } from 'react-router-dom';
 
 const HeaderList = () => {
+	// const refF = document.getElementsByClassName('Headerlist_nav__2IjC7');
+	// console.log(refF.item(0), 'refF');
+
 	return (
 		<div className={false ? css.blockBottom : css.block}>
 			<div className={false ? css.ref : css.nav}>
-				{false ? (
-					<Link
-						activeClass='active'
-						duration={50}
-						to='home'
-						className={css.default}
-						spy={true}
-						smooth={true}
-					>
-						Домой
-					</Link>
-				) : null}
-
-				<NavLink className={css.default} to='/'>
+				<NavLink className={css.default2} to='/'>
 					Назад
 				</NavLink>
 
 				<Link
 					activeClass='active'
 					duration={50}
-					to='listCountru'
+					to='usa'
 					spy={true}
 					className={css.default}
 					smooth={true}
 				>
-					Теплые страны
+					Страны Америки
 				</Link>
 
 				<Link
 					activeClass='active'
 					duration={50}
-					to='conv'
+					to='afrika'
 					className={css.default}
 					spy={true}
 					smooth={true}
 				>
-					Холодные страны
+					Страны Африки
 				</Link>
 				<Link
 					activeClass='active'
 					duration={50}
-					to='map'
+					to='euro'
+					className={css.default}
+					spy={true}
+					smooth={true}
+				>
+					Страны Европпы
+				</Link>
+				<Link
+					activeClass='active'
+					duration={50}
+					to='azia'
+					className={css.default}
+					spy={true}
+					smooth={true}
+				>
+					Страны Азии
+				</Link>
+				<Link
+					activeClass='active'
+					duration={50}
+					to='maplist'
 					className={css.default}
 					spy={true}
 					smooth={true}
