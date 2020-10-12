@@ -28,7 +28,7 @@ ul.accordion img {
 }
 
 ul.accordion li:hover {
-	width: 100%;
+	width: 70%;
 	transition: all 1s;
 	-webkit-transition: all 1s;
 	-moz-transition: all 1s;
@@ -41,7 +41,7 @@ ul.accordion li:nth-child(4) {
 }
 
 ul.accordion:hover li:nth-child(4) {
-	width: 8vw;
+	width: 8vh;
 }
 
 ul.accordion li:nth-child(4):hover {

@@ -67,9 +67,9 @@ function CountryDescription({
 										<p className={css.nameAttraction} id={index}>
 											{cities.nameAttractions}
 										</p>
-										<p className={css.describeAttraction} id={index}>
+										<div className={css.describeAttraction} id={index}>
 											{cities.describeAttraction}
-										</p>
+										</div>
 									</div>
 								</div>
 							</div>

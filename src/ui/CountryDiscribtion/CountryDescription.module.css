@@ -124,7 +124,7 @@
 	width: 70%;
 	height: 100%;
 	background-color: rgb(153, 158, 156);
-	overflow-y: auto;
+	/* overflow-y: scroll; */
 	text-align: center;
 }
 
@@ -174,7 +174,7 @@
 
 .blockP .describeAttraction {
 	font-weight: 550;
-	height: 13vh;
+	height: 12vh;
 	width: 100%;
 	margin: 0;
 }

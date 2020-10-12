@@ -1,16 +1,13 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import css from './Headerlist.module.css';
 import { Link } from 'react-scroll';
 import { NavLink } from 'react-router-dom';
 
 const HeaderList = () => {
-	// const refF = document.getElementsByClassName('Headerlist_nav__2IjC7');
-	// console.log(refF.item(0), 'refF');
-
 	return (
 		<div className={false ? css.blockBottom : css.block}>
 			<div className={false ? css.ref : css.nav}>
-				<NavLink className={css.default2} to='/'>
+				<NavLink className={css.default} to='/'>
 					Назад
 				</NavLink>
 
@@ -54,6 +51,16 @@ const HeaderList = () => {
 					smooth={true}
 				>
 					Страны Азии
+				</Link>
+				<Link
+					activeClass='active'
+					duration={50}
+					to='topDays'
+					className={css.default}
+					spy={true}
+					smooth={true}
+				>
+					Наша подборка на сегодня
 				</Link>
 				<Link
 					activeClass='active'

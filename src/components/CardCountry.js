@@ -22,7 +22,7 @@ const CardCountry = ({ arrCountry, getId, idCard }) => {
 					<div className={css.cardBlock}>
 						{arrCountry.map((country, index) => {
 							return (
-								<div key={index + 'usa'}>
+								<div key={index + 'usa'} className={css.marginCard}>
 									{country.partOfTheWorld === 'usa' ? (
 										<div className={css.card} id={index} onClick={event}>
 											<NavLink to={idCard ? '/' : null} className={css.navLink}>
@@ -57,7 +57,7 @@ const CardCountry = ({ arrCountry, getId, idCard }) => {
 					<div className={css.euro}>
 						{arrCountry.map((country, index) => {
 							return (
-								<div key={index + 'afrika'}>
+								<div key={index + 'afrika'} className={css.marginCard}>
 									{country.partOfTheWorld === 'afrika' ? (
 										<div className={css.card} id={index} onClick={event}>
 											<NavLink to={idCard ? '/' : null} className={css.navLink}>
@@ -91,7 +91,7 @@ const CardCountry = ({ arrCountry, getId, idCard }) => {
 					<div className={css.euro}>
 						{arrCountry.map((country, index) => {
 							return (
-								<div key={index + 'europa'}>
+								<div key={index + 'europa'} className={css.marginCard}>
 									{country.partOfTheWorld === 'europa' ? (
 										<div className={css.card} id={index} onClick={event}>
 											<NavLink to={idCard ? '/' : null} className={css.navLink}>
@@ -125,7 +125,41 @@ const CardCountry = ({ arrCountry, getId, idCard }) => {
 					<div className={css.euro}>
 						{arrCountry.map((country, index) => {
 							return (
-								<div key={index + 'azia'}>
+								<div key={index + 'azia'} className={css.marginCard}>
+									{country.partOfTheWorld === 'azia' ? (
+										<div className={css.card} id={index} onClick={event}>
+											<NavLink to={idCard ? '/' : null} className={css.navLink}>
+												<>
+													<div className={css.card__Img}>
+														<img src={country.cardImg} alt='' />
+													</div>
+
+													<div className={css.discribe__country}>
+														<b>{country.name}</b>{' '}
+														<div className={css.flagBlock}>
+															<img
+																src={arrCountry[index].flag}
+																alt=''
+																className={css.flagImg}
+															/>
+														</div>
+														<i>{country.cardImgDescribe}</i>
+													</div>
+												</>
+											</NavLink>
+										</div>
+									) : null}
+								</div>
+							);
+						})}
+					</div>
+				</div>
+				<div id='topDays'>
+					<h3>Нашя подборка на сегодня</h3>
+					<div className={css.euro}>
+						{arrCountry.map((country, index) => {
+							return (
+								<div key={index + 'azia'} className={css.marginCard}>
 									{country.partOfTheWorld === 'azia' ? (
 										<div className={css.card} id={index} onClick={event}>
 											<NavLink to={idCard ? '/' : null} className={css.navLink}>
