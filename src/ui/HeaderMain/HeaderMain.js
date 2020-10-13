@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 
 import { Link } from 'react-scroll';
 
-function HeaderMain({ idCard }) {
+function HeaderMain({ idCard, countresReducer }) {
 	const [bool, setBool] = useState(false);
 
 	window.addEventListener('scroll', () => {
@@ -27,7 +27,7 @@ function HeaderMain({ idCard }) {
 
 				{bool ? (
 					<Link
-						activeClass='active'
+						activeClass='act'
 						duration={50}
 						to='home'
 						className={idCard ? css.default : css.noActive}
@@ -43,18 +43,20 @@ function HeaderMain({ idCard }) {
 				</NavLink>
 
 				<Link
-					activeClass='active'
+					activeClass='act'
 					duration={50}
 					to='listCountru'
 					className={idCard ? css.default : css.noActive}
 					spy={true}
 					smooth={true}
 				>
-					{idCard ? 'Города в "Исландия"' : 'Города в "?"'}
+					{idCard
+						? `Города в  "${countresReducer[idCard].name}"`
+						: 'Города в "?"'}
 				</Link>
 
 				<Link
-					activeClass='active'
+					activeClass='act'
 					duration={50}
 					to='conv'
 					className={idCard ? css.default : css.noActive}
@@ -64,7 +66,7 @@ function HeaderMain({ idCard }) {
 					Конвертер
 				</Link>
 				<Link
-					activeClass='active'
+					activeClass='act'
 					duration={50}
 					to='map'
 					className={idCard ? css.default : css.noActive}
@@ -81,6 +83,7 @@ function HeaderMain({ idCard }) {
 const mapStateToProps = (state) => {
 	return {
 		idCard: state.cardReducer.idCard,
+		countresReducer: state.countresReducer,
 	};
 };
 

@@ -1,14 +1,38 @@
-import React from 'react';
-import Blue from './BlueJoy.mp4';
+import React, { useEffect, useState } from 'react';
+import Default from './BlueJoy.mp4';
+import Cold from './Aerial.mp4';
+import Africa from './africa.mp4';
+import Euro from './euro.mp4';
 
 import { connect } from 'react-redux';
 
 import css from './Video.module.css';
 
 function Video({ idCard, arrCountres }) {
+	const [move, setMove] = useState(Default);
+
+	const changeMove = () => {
+		if (arrCountres[idCard]) {
+			if (arrCountres[idCard].partOfTheWorld === 'euro') {
+				console.log(arrCountres[idCard], 'arrCountres[idCard]');
+				setMove(Euro);
+			} else if (arrCountres[idCard].partOfTheWorld === 'usa') {
+				setMove(Cold);
+			} else if (arrCountres[idCard].partOfTheWorld === 'afrika') {
+				setMove(Africa);
+			} else {
+				setMove(Default);
+			}
+		}
+	};
+
+	useEffect(() => {
+		changeMove();
+	});
+
 	return (
 		<div className={css.block} id='home'>
-			<video loop className={css.video} autoPlay muted src={Blue}></video>
+			<video loop className={css.video} autoPlay muted src={move}></video>
 			<div className={css.box}>
 				<h2 className={css.h2}>
 					{idCard ? arrCountres[idCard].name : 'The endles journey'}{' '}

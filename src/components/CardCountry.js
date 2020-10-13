@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import css from './CardCountry.module.css';
 
@@ -11,6 +11,10 @@ const CardCountry = ({ arrCountry, getId, idCard }) => {
 	const event = (e) => {
 		getId(e.currentTarget.id);
 	};
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	});
 
 	return (
 		<>
@@ -59,7 +63,11 @@ const CardCountry = ({ arrCountry, getId, idCard }) => {
 							return (
 								<div key={index + 'afrika'} className={css.marginCard}>
 									{country.partOfTheWorld === 'afrika' ? (
-										<div className={css.card} id={index} onClick={event}>
+										<div
+											className={`${css.card} ${css.afr}`}
+											id={index}
+											onClick={event}
+										>
 											<NavLink to={idCard ? '/' : null} className={css.navLink}>
 												<>
 													<div className={css.card__Img}>
@@ -92,8 +100,12 @@ const CardCountry = ({ arrCountry, getId, idCard }) => {
 						{arrCountry.map((country, index) => {
 							return (
 								<div key={index + 'europa'} className={css.marginCard}>
-									{country.partOfTheWorld === 'europa' ? (
-										<div className={css.card} id={index} onClick={event}>
+									{country.partOfTheWorld === 'euro' ? (
+										<div
+											className={`${css.card} ${css.evr}`}
+											id={index}
+											onClick={event}
+										>
 											<NavLink to={idCard ? '/' : null} className={css.navLink}>
 												<>
 													<div className={css.card__Img}>

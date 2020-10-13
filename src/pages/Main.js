@@ -8,12 +8,12 @@ import CountryDescription from '../ui/CountryDiscribtion/CountryDescription';
 import { connect } from 'react-redux';
 import Map from '../ui/Map/Map';
 
-function Main({ idCard, mapOfCountyArr }) {
+function Main({ idCard, mapOfCountyArr, isAttraction }) {
 	return (
 		<div>
 			<HeaderMain />
 			<Video />
-			{idCard ? <CountryDescription key={Math.random()} /> : null}
+			{idCard ? <CountryDescription key={'xxoxoxox'} /> : null}
 			{idCard ? <Converter /> : null}
 			{idCard ? <Map mapOfCounty={mapOfCountyArr[idCard].mapOfCounty} /> : null}
 		</div>
@@ -24,6 +24,8 @@ const mapStateToProps = (state) => {
 	return {
 		idCard: state.cardReducer.idCard,
 		mapOfCountyArr: state.countresReducer,
+		idSity: state.cardReducer.idSity,
+		isAttraction: state.cardReducer.isAttraction,
 	};
 };
 

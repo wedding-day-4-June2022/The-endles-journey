@@ -11,19 +11,24 @@ body {
 
 .Header_nav__1anHF > .active {
 	font-family: sans-serif;
-
 	background-color: #2a9cc9;
 }
-.Header_ref__3hRku .active {
+.Header_ref__3hRku > .active {
 	font-family: sans-serif;
-
 	background-color: #2a9cc9;
 }
-.Headerlist_nav__2IjC7 .active {
+
+.Headerlist_nav__2IjC7 > .active {
 	font-family: sans-serif;
-
 	background-color: #2a9cc9;
 }
-.Headerlist_default2__3OyP0 .active {
-	background-color: transparent;
+
+.HeaderMain_default__k0LfQ > .act {
+	font-family: sans-serif;
+	background-color: #2a9cc9;
+}
+
+.HeaderMain_ref__1_lBq > .act {
+	font-family: sans-serif;
+	background-color: #2a9cc9;
 }

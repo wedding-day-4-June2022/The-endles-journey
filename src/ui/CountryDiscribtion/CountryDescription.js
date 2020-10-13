@@ -22,11 +22,9 @@ function CountryDescription({
 
 	const changeAttractionFunc = (e) => {
 		e.stopPropagation();
-		console.log(e.target);
+
 		isAttractionFunc(e.target.id);
-
 		getIdCityAttraction(e.target.id);
-
 		document.body.style.overflow = 'hidden';
 	};
 

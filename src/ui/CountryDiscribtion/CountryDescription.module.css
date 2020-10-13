@@ -174,7 +174,8 @@
 
 .blockP .describeAttraction {
 	font-weight: 550;
-	height: 12vh;
+	min-height: 13vh;
+	height: 70%;
 	width: 100%;
 	margin: 0;
 }
@@ -187,29 +188,25 @@
 [data-title]:after {
 	content: attr(data-title);
 	color: #fff;
-	background: linear-gradient(#e66465, #9198e5);
-	padding: 23%;
+	background: linear-gradient(#b3b3b3, #a8abcc);
+	padding: 20%;
 	text-align: center;
 	text-shadow: 1px 1px 3px black;
 	clip-path: polygon(
-		0% 15%,
-		15% 15%,
-		15% 0%,
-		85% 0%,
-		85% 15%,
-		100% 15%,
-		100% 85%,
-		85% 85%,
-		85% 100%,
-		15% 100%,
-		15% 85%,
-		0% 85%
+		0% 0%,
+		100% 0%,
+		100% 70%,
+		90% 80%,
+		80% 90%,
+		70% 100%,
+		0% 100%
 	);
 	font-size: 1.2em;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 	width: 40vw;
-	border-radius: 15px;
+	font-size: 1.3em;
+	margin-left: 50%;
 
 	position: absolute;
 	left: -9999px;
@@ -217,10 +214,7 @@
 	top: 100%;
 	-webkit-transition: 0.2s linear opacity;
 	transition: 0.2s linear opacity;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	-ms-border-radius: 15px;
-	-o-border-radius: 15px;
+
 	-moz-transition: 0.2s linear opacity;
 	-ms-transition: 0.2s linear opacity;
 	-o-transition: 0.2s linear opacity;
