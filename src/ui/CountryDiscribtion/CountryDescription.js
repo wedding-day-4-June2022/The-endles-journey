@@ -1,11 +1,12 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import './h.css';
 import css from './CountryDescription.module.css';
 import { connect } from 'react-redux';
 import {
 	getSity,
 	getAttraction,
 	getSityAttraction,
+	changeBoolScrollToTop,
 } from '../../redux/actions/action';
 
 function CountryDescription({
@@ -15,17 +16,33 @@ function CountryDescription({
 	idSity,
 	isAttractionFunc,
 	getIdCityAttraction,
+	changeBoolScrollToTop,
 }) {
+	const [eId, setEId] = useState(
+		document.getElementsByClassName('CountryDescription_cityNameCss__1pG-v')
+	);
+
 	const clickOnSity = (e) => {
 		getIdSity(e.target.id);
+		changeBoolScrollToTop(false);
+		for (let i = 0; i < eId.length; i++) {
+			if (eId.item(i).className !== 'acc') {
+				eId.item(i).classList.remove('acc');
+				setEId(eId.item(e.target.id).classList.add('acc'));
+			}
+		}
+
+		setEId(
+			document.getElementsByClassName('CountryDescription_cityNameCss__1pG-v')
+		);
 	};
 
 	const changeAttractionFunc = (e) => {
 		e.stopPropagation();
-
 		isAttractionFunc(e.target.id);
 		getIdCityAttraction(e.target.id);
 		document.body.style.overflow = 'hidden';
+		changeBoolScrollToTop(false);
 	};
 
 	return (
@@ -95,6 +112,7 @@ const mapDispatchToProps = (dispatch) => {
 		getIdSity: (num) => dispatch(getSity(num)),
 		isAttractionFunc: (num) => dispatch(getAttraction(num)),
 		getIdCityAttraction: (num) => dispatch(getSityAttraction(num)),
+		changeBoolScrollToTop: (num) => dispatch(changeBoolScrollToTop(num)),
 	};
 };
 

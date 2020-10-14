@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import HeaderMain from '../ui/HeaderMain/HeaderMain';
 import Video from '../ui/Video/Video';
@@ -8,7 +8,13 @@ import CountryDescription from '../ui/CountryDiscribtion/CountryDescription';
 import { connect } from 'react-redux';
 import Map from '../ui/Map/Map';
 
-function Main({ idCard, mapOfCountyArr, isAttraction }) {
+function Main({ idCard, mapOfCountyArr, scrollToTop }) {
+	useEffect(() => {
+		if (scrollToTop) {
+			window.scrollTo(0, 0);
+		}
+	});
+
 	return (
 		<div>
 			<HeaderMain />
@@ -26,6 +32,7 @@ const mapStateToProps = (state) => {
 		mapOfCountyArr: state.countresReducer,
 		idSity: state.cardReducer.idSity,
 		isAttraction: state.cardReducer.isAttraction,
+		scrollToTop: state.cardReducer.scrollToTop,
 	};
 };
 

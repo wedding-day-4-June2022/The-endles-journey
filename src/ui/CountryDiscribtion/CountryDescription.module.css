@@ -55,6 +55,9 @@
 	background: linear-gradient(#54e0e0, #7f87df);
 }
 
+.cityNameCss {
+	color: wheat;
+}
 .blockImgDesc {
 	margin: 2% 0;
 	display: flex;
@@ -187,12 +190,12 @@
 }
 [data-title]:after {
 	content: attr(data-title);
-	color: #fff;
-	background: linear-gradient(#b3b3b3, #a8abcc);
-	padding: 20%;
+	color: black;
+	background: linear-gradient(#f3f3f3, #d6d5d5);
+	padding: 15%;
 	text-align: center;
-	text-shadow: 1px 1px 3px black;
-	clip-path: polygon(
+	/* text-shadow: 1px 1px 3px black; */
+	/* clip-path: polygon(
 		0% 0%,
 		100% 0%,
 		100% 70%,
@@ -200,7 +203,8 @@
 		80% 90%,
 		70% 100%,
 		0% 100%
-	);
+	); */
+	box-shadow: inset 5px 5px 8px #f3f3f3, inset -5px -5px 8px #d6d5d5;
 	font-size: 1.2em;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
@@ -227,4 +231,8 @@
 	-moz-transition: 0.3s linear opacity;
 	-ms-transition: 0.3s linear opacity;
 	-o-transition: 0.3s linear opacity;
+}
+
+.active {
+	background-color: chartreuse;
 }

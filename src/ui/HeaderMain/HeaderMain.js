@@ -6,8 +6,14 @@ import css from './HeaderMain.module.css';
 import { connect } from 'react-redux';
 
 import { Link } from 'react-scroll';
+import { changeBoolScrollToTop, getSity } from '../../redux/actions/action';
 
-function HeaderMain({ idCard, countresReducer }) {
+function HeaderMain({
+	idCard,
+	countresReducer,
+	changeBoolScrollToTop,
+	getSity,
+}) {
 	const [bool, setBool] = useState(false);
 
 	window.addEventListener('scroll', () => {
@@ -38,7 +44,14 @@ function HeaderMain({ idCard, countresReducer }) {
 					</Link>
 				) : null}
 
-				<NavLink className={css.default} to='/allCountrys'>
+				<NavLink
+					className={css.default}
+					to='/allCountrys'
+					onClick={() => {
+						getSity(null);
+						changeBoolScrollToTop(true);
+					}}
+				>
 					Все страны
 				</NavLink>
 
@@ -86,5 +99,11 @@ const mapStateToProps = (state) => {
 		countresReducer: state.countresReducer,
 	};
 };
+const mapDispatchToProps = (dispatch) => {
+	return {
+		changeBoolScrollToTop: (num) => dispatch(changeBoolScrollToTop(num)),
+		getSity: (num) => dispatch(getSity(num)),
+	};
+};
 
-export default connect(mapStateToProps, null)(HeaderMain);
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderMain);

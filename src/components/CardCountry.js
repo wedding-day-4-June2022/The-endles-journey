@@ -21,7 +21,7 @@ const CardCountry = ({ arrCountry, getId, idCard }) => {
 			<HeaderList />
 			<div className={css.pageBlock}>
 				<div id='usa'>
-					<h3>Страны Америки</h3>
+					<h3>Америка</h3>
 
 					<div className={css.cardBlock}>
 						{arrCountry.map((country, index) => {
@@ -57,7 +57,7 @@ const CardCountry = ({ arrCountry, getId, idCard }) => {
 				</div>
 
 				<div id='afrika'>
-					<h3>Страны Африки</h3>
+					<h3> Африка</h3>
 					<div className={css.euro}>
 						{arrCountry.map((country, index) => {
 							return (
@@ -95,7 +95,7 @@ const CardCountry = ({ arrCountry, getId, idCard }) => {
 					</div>
 				</div>
 				<div id='euro'>
-					<h3>Страны Европпы</h3>
+					<h3>Европпа</h3>
 					<div className={css.euro}>
 						{arrCountry.map((country, index) => {
 							return (
@@ -133,7 +133,7 @@ const CardCountry = ({ arrCountry, getId, idCard }) => {
 					</div>
 				</div>
 				<div id='azia'>
-					<h3>Страны Азии</h3>
+					<h3>Азия</h3>
 					<div className={css.euro}>
 						{arrCountry.map((country, index) => {
 							return (

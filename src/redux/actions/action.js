@@ -4,6 +4,7 @@ import {
 	ATTRACTION,
 	CITY_ATTRACTION,
 	MODAL_IMG,
+	SCROLL_TO_TOP,
 } from './actionType';
 
 export const getId = (num) => {
@@ -33,6 +34,12 @@ export const getSityAttraction = (num) => {
 export const getIdModalImg = (num) => {
 	return {
 		type: MODAL_IMG,
+		payload: num,
+	};
+};
+export const changeBoolScrollToTop = (num) => {
+	return {
+		type: SCROLL_TO_TOP,
 		payload: num,
 	};
 };

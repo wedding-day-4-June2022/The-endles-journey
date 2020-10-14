@@ -14,7 +14,6 @@ function Video({ idCard, arrCountres }) {
 	const changeMove = () => {
 		if (arrCountres[idCard]) {
 			if (arrCountres[idCard].partOfTheWorld === 'euro') {
-				console.log(arrCountres[idCard], 'arrCountres[idCard]');
 				setMove(Euro);
 			} else if (arrCountres[idCard].partOfTheWorld === 'usa') {
 				setMove(Cold);

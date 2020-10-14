@@ -4,6 +4,7 @@ import {
 	ATTRACTION,
 	CITY_ATTRACTION,
 	MODAL_IMG,
+	SCROLL_TO_TOP,
 } from '../actions/actionType';
 
 const initialState = {
@@ -12,6 +13,7 @@ const initialState = {
 	isAttraction: false,
 	idSityAttraction: false,
 	idModalImg: false,
+	scrollToTop: true,
 };
 
 export function cardReducer(state = initialState, action) {
@@ -23,6 +25,7 @@ export function cardReducer(state = initialState, action) {
 				isAttraction: state.isAttraction,
 				idSityAttraction: state.idSityAttraction,
 				idModalImg: state.idModalImg,
+				scrollToTop: state.scrollToTop,
 			};
 		case SITY:
 			return {
@@ -31,6 +34,7 @@ export function cardReducer(state = initialState, action) {
 				isAttraction: state.isAttraction,
 				idSityAttraction: state.idSityAttraction,
 				idModalImg: state.idModalImg,
+				scrollToTop: state.scrollToTop,
 			};
 		case ATTRACTION:
 			return {
@@ -39,6 +43,7 @@ export function cardReducer(state = initialState, action) {
 				isAttraction: (state.isAttraction = action.payload),
 				idSityAttraction: state.idSityAttraction,
 				idModalImg: state.idModalImg,
+				scrollToTop: state.scrollToTop,
 			};
 		case CITY_ATTRACTION:
 			return {
@@ -47,6 +52,7 @@ export function cardReducer(state = initialState, action) {
 				isAttraction: state.isAttraction,
 				idSityAttraction: (state.idSityAttraction = action.payload),
 				idModalImg: state.idModalImg,
+				scrollToTop: state.scrollToTop,
 			};
 		case MODAL_IMG:
 			return {
@@ -55,6 +61,16 @@ export function cardReducer(state = initialState, action) {
 				isAttraction: state.isAttraction,
 				idSityAttraction: state.idSityAttraction,
 				idModalImg: (state.idModalImg = action.payload),
+				scrollToTop: state.scrollToTop,
+			};
+		case SCROLL_TO_TOP:
+			return {
+				idSity: state.idSity,
+				idCard: state.idCard,
+				isAttraction: state.isAttraction,
+				idSityAttraction: state.idSityAttraction,
+				idModalImg: state.idModalImg,
+				scrollToTop: (state.scrollToTop = action.payload),
 			};
 
 		default:
