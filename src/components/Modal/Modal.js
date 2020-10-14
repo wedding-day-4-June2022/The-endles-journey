@@ -22,12 +22,8 @@ function Modal({
 	const modal = modalSity[idCard].sities[idSity].attractions[idCityAttraction];
 	return (
 		<div className={css.blockAbsolute} onClick={closeModal}>
-			<img
-				src={'https://emojio.ru/images/apple-b/274c.png'}
-				alt=''
-				className={css.imgClose}
-			/>
 			<div className={css.blockContent} onClick={(e) => e.stopPropagation()}>
+				<h3 className={css.h3Text}>{modal.nameAttractions}</h3>
 				<div className={css.blockOneFlex}>
 					<div className={css.blockImg}>
 						<img src={modal.modal[0].imgDescribeAttraction} alt='' />

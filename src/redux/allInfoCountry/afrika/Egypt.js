@@ -55,10 +55,10 @@ export default {
 						},
 					],
 					accordion: [
-						'https://lh3.googleusercontent.com/proxy/yPwBwnflixW91wwTEpJVnK0_B-AX0OAmxmiWEOnuRz2fCnWdfcZvEziq4khjILni6XMweaMlQq-zWQedscKU0-G7blsbigQ91EB4orGHrA',
+						'https://ms1.relax.by/images/07d5b2c4e6f0d23bf9ff9c6413fa94c1/resize/w%3D1200%2Ch%3D800%2Cq%3D80/product_photo/98/66/91/98669161d7ef3449b4c200373f253366.jpg',
 						'https://1001beach.ru/img/posts/4244/1200/naama_bay-1.jpg',
-						'https://lh3.googleusercontent.com/proxy/VvzB9nKA1qu9qukD30BhBosBiO93qBlns14gFrL9ZyuHGRH80N2BmDKwlHd8WnThlN-eQ6A0_DhnGbsIGNkk7vdGT4z_sZCEq77Wfvw6LlwyZdHMwKQidB-hEiWv5ZWDnbx7k4-E5DNI49AVWjUERbrKe2qVLCVshhVlHg',
-						'https://lh3.googleusercontent.com/proxy/1ctIZeJP-IkPS2_mBTY2r4bN2zdPrUVS2x0VkHJOiN4YwoDz_6b2cn330iEaQCnIX_8HOVeMtPbRWnuHXPCfyEb5J_VaPef4XvXi9FFpwGGvxzcyhx_T2F_p-5kUxzN2PJAS_zO7mZQ',
+						'https://pictures.novatours.eu/img_srv/hotels/ssh/egstropnam/800xN/EGSTROPNAM_NAAM-TOP-Main-pool-4.jpg?market=EENOV&p=hotel_main',
+						'https://mapio.net/images-p/4093519.jpg',
 						'https://www.ola.ua/pageImage/egypt_170820120604_1_1722.jpg?width=600&height=400',
 						'https://media-cdn.tripadvisor.com/media/photo-s/08/d7/d6/ea/na-ama-bay.jpg',
 						'https://www.belfresh.by/BF_freeUploadDir/files/EGYPT/Naama-bay-egypt-tour-belfresh.jpg',
