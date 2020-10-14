@@ -30,17 +30,39 @@
 	position: absolute;
 	mix-blend-mode: overlay;
 	padding: 5%;
+	opacity: 1;
+	align-self: center;
+	margin-top: -18px;
+	transition: all 0.3s ease;
+	transform: rotateX(40deg) rotateZ(5deg);
+	font-family: Impact, Charcoal, sans-serif;
+	font-size: 100px;
+	letter-spacing: 3px;
+	color: #f5f5f5;
+	text-shadow: white 0.006em 0.006em 0.007em, #9c9c9c 1px 1px 1px,
+		#9c9c9c 1px 2px 1px, #9c9c9c 1px 3px 1px, #9c9c9c 1px 4px 1px,
+		#9c9c9c 1px 5px 1px, #9c9c9c 1px 6px 1px, #9c9c9c 1px 7px 1px,
+		#9c9c9c 1px 8px 1px, #9c9c9c 1px 9px 1px, #9c9c9c 1px 10px 1px,
+		#9c9c9c 1px 11px 1px, #9c9c9c 1px 12px 1px,
+		rgba(16, 16, 16, 0.4) 1px 18px 6px, rgba(16, 16, 16, 0.2) 1px 22px 10px,
+		rgba(16, 16, 16, 0.2) 1px 26px 35px, rgba(16, 16, 16, 0.4) 1px 30px 65px;
 }
 .box {
 	width: 40%;
 	height: 35%;
 	background-color: rgba(0, 0, 0, 0.3);
 	position: absolute;
-	outline: 2px dashed rgba(255, 255, 255, 0.8); /* Пунктирная рамка */
+	outline: 2px dashed rgba(255, 255, 255, 0.8);
 	outline-offset: -10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	perspective: 33000px;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
 }
 
 .box:after {

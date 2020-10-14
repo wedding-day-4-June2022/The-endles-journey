@@ -3,12 +3,16 @@ import { NavLink } from 'react-router-dom';
 import css from './CardCountry.module.css';
 
 import { connect } from 'react-redux';
-import { getId } from '../redux/actions/action';
+import { getId, getSity } from '../redux/actions/action';
 
 import HeaderList from '../ui/HeaderInListCounters/Headerlist';
 
-const CardCountry = ({ arrCountry, getId, idCard }) => {
+const CardCountry = ({ arrCountry, getId, idCard, getSity }) => {
 	const event = (e) => {
+		if (e.currentTarget.id !== idCard) {
+			getSity(null);
+		}
+
 		getId(e.currentTarget.id);
 	};
 
@@ -224,6 +228,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		getId: (num) => dispatch(getId(num)),
+		getSity: (num) => dispatch(getSity(num)),
 	};
 };
 

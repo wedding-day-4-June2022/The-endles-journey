@@ -6,14 +6,9 @@ import css from './HeaderMain.module.css';
 import { connect } from 'react-redux';
 
 import { Link } from 'react-scroll';
-import { changeBoolScrollToTop, getSity } from '../../redux/actions/action';
+import { changeBoolScrollToTop } from '../../redux/actions/action';
 
-function HeaderMain({
-	idCard,
-	countresReducer,
-	changeBoolScrollToTop,
-	getSity,
-}) {
+function HeaderMain({ idCard, countresReducer, changeBoolScrollToTop }) {
 	const [bool, setBool] = useState(false);
 
 	window.addEventListener('scroll', () => {
@@ -48,7 +43,6 @@ function HeaderMain({
 					className={css.default}
 					to='/allCountrys'
 					onClick={() => {
-						getSity(null);
 						changeBoolScrollToTop(true);
 					}}
 				>
@@ -102,7 +96,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		changeBoolScrollToTop: (num) => dispatch(changeBoolScrollToTop(num)),
-		getSity: (num) => dispatch(getSity(num)),
 	};
 };
 
