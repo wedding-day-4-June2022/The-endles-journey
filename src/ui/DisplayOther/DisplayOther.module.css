@@ -36,6 +36,9 @@
 	text-align: center;
 	cursor: pointer;
 }
+.card:nth-child(1) {
+	margin-top: 0;
+}
 
 .card h3 {
 	color: rgb(23, 23, 27);

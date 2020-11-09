@@ -1,0 +1,94 @@
+.container {
+	width: 100%;
+	height: 90vh;
+	background-color: cornsilk;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.block {
+	width: 60vw;
+	height: 60vh;
+}
+
+.cardEng {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+h4 {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.answer {
+	width: 25vw;
+	background-color: cyan;
+	text-align: center;
+	height: 15vh;
+	margin: 3%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+.answer:hover {
+	box-shadow: 2px 2px 3px cyan, -2px -2px 3px cyan;
+}
+
+.error {
+	position: absolute;
+	width: 10vw;
+	height: 10vh;
+	background-color: rgb(224, 88, 70);
+	top: 10vh;
+	right: 10vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5em;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+.succsess {
+	position: absolute;
+	width: 10vw;
+	height: 10vh;
+	background-color: rgb(104, 219, 152);
+	top: 10vh;
+	left: 10vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5em;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+.succsessEnd {
+	font-size: 1.8em;
+	color: rgb(46, 235, 87);
+	font-weight: bold;
+	text-align: center;
+}
+
+.errorEnd {
+	font-size: 1.8em;
+	color: rgb(219, 60, 81);
+	font-weight: bold;
+	text-align: center;
+}

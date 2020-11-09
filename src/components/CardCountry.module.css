@@ -38,6 +38,10 @@
 	-ms-transition: 0.5s;
 	-o-transition: 0.5s;
 }
+.card a {
+	display: block;
+	width: 100%;
+}
 
 .afr {
 	background: linear-gradient(0.25turn, #d1c662, #f5e9b6, #eb8a97);

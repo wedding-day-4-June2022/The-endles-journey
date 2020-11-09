@@ -11,7 +11,7 @@ import SaveCountres from '../ui/SaveCountres/SaveCountres';
 function Other() {
 	const [num, setNum] = useState(undefined);
 	const data = [
-		{ name: 'Игры', bgc: '', path: 'game' },
+		{ name: 'Игры на знание стран', bgc: '', path: 'game' },
 		{ name: 'Вспомнить Английский', bgc: '', path: 'english' },
 		{ name: 'Сохраненные вами страны', bgc: '', path: 'yourCountres' },
 	];

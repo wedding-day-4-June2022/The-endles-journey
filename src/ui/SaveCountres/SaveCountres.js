@@ -6,7 +6,6 @@ function SaveCountres({ setNum }) {
 	return (
 		<div>
 			<h1>SaveCountres</h1>
-			<button onClick={() => setNum(undefined)}> back</button>
 		</div>
 	);
 }

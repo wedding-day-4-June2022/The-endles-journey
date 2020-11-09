@@ -11,7 +11,6 @@ function DisplayOther({ data, setNum }) {
 				{data.map((el, index) => {
 					return (
 						<div
-							to={`/${el.path}`}
 							className={css.card}
 							id={`${el.path}`}
 							key={index}
