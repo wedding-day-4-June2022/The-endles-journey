@@ -5,12 +5,13 @@ import './App.css';
 import { connect } from 'react-redux';
 import { getAttraction } from './redux/actions/action';
 
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import ListCountrys from './ui/ListCountrys/ListCountrys';
 import Main from './pages/Main';
 import Modal from './components/Modal/Modal';
 import ModalImg from './components/ModalImg/ModalImg';
+import Other from './pages/Other';
 
 const App = ({ isAttraction, idModalImg }) => {
 	return (
@@ -26,7 +27,10 @@ const App = ({ isAttraction, idModalImg }) => {
 				  )
 				: null}
 
-			<Route exact path={'/'} component={Main} />
+			<Switch>
+				<Route exact path={'/'} component={Main} />
+				<Route exact path={'/other'} component={Other} />
+			</Switch>
 			<Route path='/allCountrys' component={ListCountrys} />
 		</div>
 	);

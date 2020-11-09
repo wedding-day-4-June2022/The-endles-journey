@@ -1,0 +1,43 @@
+.block {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	height: 10vh;
+	align-items: center;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	background: linear-gradient(
+		rgba(168, 238, 255, 0.7),
+		rgba(88, 190, 230, 0.6)
+	);
+}
+
+a {
+	text-decoration: none;
+	text-align: center;
+	font-weight: 700;
+	font-size: 21px;
+	width: 15%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+
+a:hover {
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	background-color: rgba(255, 255, 255, 0.7);
+}

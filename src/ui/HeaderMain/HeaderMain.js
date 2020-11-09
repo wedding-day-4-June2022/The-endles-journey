@@ -82,6 +82,9 @@ function HeaderMain({ idCard, countresReducer, changeBoolScrollToTop }) {
 				>
 					Карта
 				</Link>
+				<NavLink className={css.default} to='/other'>
+					Другое
+				</NavLink>
 			</div>
 		</div>
 	);
