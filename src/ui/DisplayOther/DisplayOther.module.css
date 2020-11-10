@@ -44,7 +44,7 @@
 	color: rgb(23, 23, 27);
 	font-size: 2.6em;
 	text-shadow: 1px 1px 3px white, -1px -1px 3px white;
-	width: 50%;
+	margin: 4% 0;
 }
 .card p {
 	color: black;
@@ -58,4 +58,10 @@
 	-moz-transition: 0.5s;
 	-ms-transition: 0.5s;
 	-o-transition: 0.5s;
+}
+.f {
+	display: inline-block;
+	font-weight: 700;
+	font-size: 1.2em;
+	margin: 0 3%;
 }

@@ -26,9 +26,10 @@ h4 {
 
 .answer {
 	width: 25vw;
-	background-color: cyan;
+	background-color: rgb(175, 184, 184);
 	text-align: center;
 	height: 15vh;
+	font-size: 1.3em;
 	margin: 3%;
 	display: flex;
 	justify-content: center;

@@ -18,6 +18,7 @@ function Main({ idCard, mapOfCountyArr, scrollToTop }) {
 	return (
 		<div>
 			<HeaderMain />
+
 			<Video />
 			{idCard ? <CountryDescription key={'xxoxoxox'} /> : null}
 			{idCard ? <Converter /> : null}

@@ -1,29 +1,12 @@
 import React, { useState } from 'react';
-import css from './English.module.css';
+import css from './Quiz.module.css';
 import { connect } from 'react-redux';
-import './English.css';
+import './Quiz.css';
 
-function English({ setNum }) {
+function Quiz({ arr }) {
 	const [iter, setIter] = useState(0);
 	const [error, setError] = useState(0);
 	const [succsess, setSuccsess] = useState(0);
-	const arr = [
-		{
-			question: 'I have ___ apples right now!',
-			answer: ['one', 'tree', 'a', 'an'],
-			rightAnswer: 'tree',
-		},
-		{
-			question: 'What ___ of letter do you like?',
-			answer: ['more', 'kindow', 'sort', 'have'],
-			rightAnswer: 'sort',
-		},
-		{
-			question: 'I ___ two beer please! Give me it please',
-			answer: ['hope', 'want', 'like', 'am'],
-			rightAnswer: 'want',
-		},
-	];
 
 	const answerFunc = (e) => {
 		const eTarget = e.target;
@@ -53,7 +36,7 @@ function English({ setNum }) {
 					<div className={css.cardEng}>
 						{arr[iter].answer.map((item, index) => {
 							return (
-								<div className={css.answer} onClick={answerFunc}>
+								<div className={css.answer} onClick={answerFunc} key={index}>
 									{item}
 								</div>
 							);
@@ -85,4 +68,4 @@ const mapStateToProps = (state) => {
 	return {};
 };
 
-export default connect(mapStateToProps, null)(English);
+export default connect(mapStateToProps, null)(Quiz);

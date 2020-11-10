@@ -8,7 +8,7 @@ function DisplayOther({ data, setNum }) {
 	return (
 		<div className={css.container}>
 			<div className={css.block}>
-				{data.map((el, index) => {
+				{data.questionsEng.map((el, index) => {
 					return (
 						<div
 							className={css.card}
@@ -18,7 +18,28 @@ function DisplayOther({ data, setNum }) {
 								setNum(index);
 							}}
 						>
-							<h3>{el.name}</h3>
+							<div>
+								<h3>{el.name}</h3>
+
+								<div>
+									{el.path === 'game' ? (
+										<div>
+											<div className={css.f}>Ваши сохраненные:</div>{' '}
+											{Array.from(data.yourSaveCountres).map(
+												(country, index) => {
+													return (
+														<>
+															<div className={css.f} key={index}>
+																<div className={css.p}>{country}</div>
+															</div>
+														</>
+													);
+												}
+											)}
+										</div>
+									) : null}
+								</div>
+							</div>
 							<p>descr</p>
 						</div>
 					);

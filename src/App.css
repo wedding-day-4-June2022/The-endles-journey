@@ -32,3 +32,10 @@ body {
 	font-family: sans-serif;
 	background-color: #2a9cc9;
 }
+
+.success {
+	background-color: yellowgreen;
+}
+.error {
+	background-color: orange;
+}

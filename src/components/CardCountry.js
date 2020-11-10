@@ -3,11 +3,17 @@ import { NavLink } from 'react-router-dom';
 import css from './CardCountry.module.css';
 
 import { connect } from 'react-redux';
-import { getId, getSity } from '../redux/actions/action';
+import { add_countres_arr, getId, getSity } from '../redux/actions/action';
 
 import HeaderList from '../ui/HeaderInListCounters/Headerlist';
 
-const CardCountry = ({ arrCountry, getId, idCard, getSity }) => {
+const CardCountry = ({
+	arrCountry,
+	getId,
+	idCard,
+	getSity,
+	getNameCountry,
+}) => {
 	const event = (e) => {
 		if (e.currentTarget.id !== idCard) {
 			getSity(null);
@@ -37,6 +43,19 @@ const CardCountry = ({ arrCountry, getId, idCard, getSity }) => {
 												<>
 													<div className={css.card__Img}>
 														<img src={country.cardImg} alt='' />
+													</div>
+													<div
+														className={css.icon}
+														onClick={(e) => {
+															e.preventDefault();
+															e.stopPropagation();
+															getNameCountry(country.name);
+															e.target.classList.toggle('success');
+														}}
+														title='Добавление страны в "Просмотреть позже"'
+													>
+														{' '}
+														&#10031;{' '}
 													</div>
 
 													<div className={css.discribe__country}>
@@ -77,6 +96,19 @@ const CardCountry = ({ arrCountry, getId, idCard, getSity }) => {
 													<div className={css.card__Img}>
 														<img src={country.cardImg} alt='' />
 													</div>
+													<div
+														className={css.icon}
+														onClick={(e) => {
+															e.preventDefault();
+															e.stopPropagation();
+															getNameCountry(country.name);
+															e.target.classList.toggle('success');
+														}}
+														title='Добавление страны в "Просмотреть позже"'
+													>
+														{' '}
+														&#10031;{' '}
+													</div>
 
 													<div className={css.discribe__country}>
 														<b>{country.name}</b>{' '}
@@ -115,6 +147,19 @@ const CardCountry = ({ arrCountry, getId, idCard, getSity }) => {
 													<div className={css.card__Img}>
 														<img src={country.cardImg} alt='' />
 													</div>
+													<div
+														className={css.icon}
+														onClick={(e) => {
+															e.preventDefault();
+															e.stopPropagation();
+															getNameCountry(country.name);
+															e.target.classList.toggle('success');
+														}}
+														title='Добавление страны в "Просмотреть позже"'
+													>
+														{' '}
+														&#10031;{' '}
+													</div>
 
 													<div className={css.discribe__country}>
 														<b>{country.name}</b>{' '}
@@ -149,6 +194,19 @@ const CardCountry = ({ arrCountry, getId, idCard, getSity }) => {
 													<div className={css.card__Img}>
 														<img src={country.cardImg} alt='' />
 													</div>
+													<div
+														className={css.icon}
+														onClick={(e) => {
+															e.preventDefault();
+															e.stopPropagation();
+															getNameCountry(country.name);
+															e.target.classList.toggle('success');
+														}}
+														title='Добавление страны в "Просмотреть позже"'
+													>
+														{' '}
+														&#10031;{' '}
+													</div>
 
 													<div className={css.discribe__country}>
 														<b>{country.name}</b>{' '}
@@ -182,6 +240,19 @@ const CardCountry = ({ arrCountry, getId, idCard, getSity }) => {
 												<>
 													<div className={css.card__Img}>
 														<img src={country.cardImg} alt='' />
+													</div>
+													<div
+														className={css.icon}
+														onClick={(e) => {
+															e.preventDefault();
+															e.stopPropagation();
+															getNameCountry(country.name);
+															e.target.classList.toggle('success');
+														}}
+														title='Добавление страны в "Просмотреть позже"'
+													>
+														{' '}
+														&#10031;{' '}
 													</div>
 
 													<div className={css.discribe__country}>
@@ -220,6 +291,7 @@ const CardCountry = ({ arrCountry, getId, idCard, getSity }) => {
 };
 
 const mapStateToProps = (state) => {
+	console.log(state, 'state');
 	return {
 		arrCountry: state.countresReducer,
 		idCard: state.cardReducer,
@@ -229,6 +301,7 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		getId: (num) => dispatch(getId(num)),
 		getSity: (num) => dispatch(getSity(num)),
+		getNameCountry: (str) => dispatch(add_countres_arr(str)),
 	};
 };
 

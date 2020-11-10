@@ -58,14 +58,6 @@
 		linear-gradient(336deg, rgba(42, 240, 247, 0.8), rgba(0, 0, 255, 0) 70.71%); */
 }
 
-.card:hover {
-	box-shadow: 3px 3px 5px black, -3px -3px 5px black;
-	transition: 0.5s;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-ms-transition: 0.5s;
-	-o-transition: 0.5s;
-}
 .card__Img img {
 	width: 100%;
 	height: 100%;
@@ -171,4 +163,23 @@
 
 .marginCard {
 	padding: 1% 0;
+}
+
+.icon {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	font-size: 2em;
+	width: 20%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgb(34, 31, 31) (39, 37, 37);
+}
+
+.icon:hover {
+	text-shadow: 1px 1px wheat;
+	box-shadow: 2px 2px 2px wheat, -2px -2px 2px wheat;
 }

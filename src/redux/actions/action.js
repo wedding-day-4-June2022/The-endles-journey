@@ -5,6 +5,7 @@ import {
 	CITY_ATTRACTION,
 	MODAL_IMG,
 	SCROLL_TO_TOP,
+	ADD_COUNTRES_ARR,
 } from './actionType';
 
 export const getId = (num) => {
@@ -41,5 +42,11 @@ export const changeBoolScrollToTop = (num) => {
 	return {
 		type: SCROLL_TO_TOP,
 		payload: num,
+	};
+};
+export const add_countres_arr = (str) => {
+	return {
+		type: ADD_COUNTRES_ARR,
+		payload: str,
 	};
 };

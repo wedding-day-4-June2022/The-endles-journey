@@ -2,13 +2,8 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 
-function Game({ setNum }) {
-	return (
-		<div>
-			<h1>GAME</h1>
-			<button onClick={() => setNum(undefined)}> back</button>
-		</div>
-	);
+function Game() {
+	return <div></div>;
 }
 
 const mapStateToProps = (state) => {
