@@ -34,7 +34,7 @@ body {
 }
 
 .success {
-	background-color: yellowgreen;
+	background-color: rgb(92, 218, 98);
 }
 .error {
 	background-color: orange;

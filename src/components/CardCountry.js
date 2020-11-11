@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import css from './CardCountry.module.css';
 
@@ -18,13 +18,25 @@ const CardCountry = ({
 		if (e.currentTarget.id !== idCard) {
 			getSity(null);
 		}
-
 		getId(e.currentTarget.id);
 	};
+	const [iterUSA, setIterUSA] = useState(null);
+	const [iterAFR, setIterAFR] = useState(null);
+	const [iterEU, setIterEU] = useState(null);
+	const [iterAZ, setIterAZ] = useState(null);
+	const [iterOUR, setIterOUR] = useState(null);
+
+	const [changeItemUSA, setChangeIconUSA] = useState(false);
+	const [changeItemAFR, setChangeIconAFR] = useState(false);
+	const [changeItemEU, setChangeIconEU] = useState(false);
+	const [changeItemAZ, setChangeIconAZ] = useState(false);
+	const [changeItemOUR, setChangeIconOUR] = useState(false);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	});
+
+	// const itemQuery = document.querySelector('.CardCountry_euro__15s7n'); // end
 
 	return (
 		<>
@@ -43,14 +55,36 @@ const CardCountry = ({
 												<>
 													<div className={css.card__Img}>
 														<img src={country.cardImg} alt='' />
+														<div
+															className={iterUSA ? css.animationMy : css.sea}
+														>
+															{changeItemUSA ? (
+																'Страна сохранена'
+															) : (
+																<> Сохранение удалено &#128274;</>
+															)}
+														</div>
 													</div>
+
 													<div
 														className={css.icon}
 														onClick={(e) => {
 															e.preventDefault();
 															e.stopPropagation();
 															getNameCountry(country.name);
-															e.target.classList.toggle('success');
+
+															if (!e.target.classList.contains('success')) {
+																e.target.classList.add('success');
+																setChangeIconUSA(true);
+															} else {
+																e.target.classList.remove('success');
+																setChangeIconUSA(false);
+															}
+
+															setIterUSA(true);
+															setTimeout(() => {
+																setIterUSA(false);
+															}, 1000);
 														}}
 														title='Добавление страны в "Просмотреть позже"'
 													>
@@ -95,6 +129,15 @@ const CardCountry = ({
 												<>
 													<div className={css.card__Img}>
 														<img src={country.cardImg} alt='' />
+														<div
+															className={iterAFR ? css.animationMy : css.sea}
+														>
+															{changeItemAFR ? (
+																'Страна сохранена'
+															) : (
+																<> Сохранение удалено &#128274;</>
+															)}
+														</div>
 													</div>
 													<div
 														className={css.icon}
@@ -102,7 +145,18 @@ const CardCountry = ({
 															e.preventDefault();
 															e.stopPropagation();
 															getNameCountry(country.name);
-															e.target.classList.toggle('success');
+															if (!e.target.classList.contains('success')) {
+																e.target.classList.add('success');
+																setChangeIconAFR(true);
+															} else {
+																e.target.classList.remove('success');
+																setChangeIconAFR(false);
+															}
+
+															setIterAFR(true);
+															setTimeout(() => {
+																setIterAFR(false);
+															}, 1000);
 														}}
 														title='Добавление страны в "Просмотреть позже"'
 													>
@@ -146,6 +200,13 @@ const CardCountry = ({
 												<>
 													<div className={css.card__Img}>
 														<img src={country.cardImg} alt='' />
+														<div className={iterEU ? css.animationMy : css.sea}>
+															{changeItemEU ? (
+																'Страна сохранена'
+															) : (
+																<> Сохранение удалено &#128274;</>
+															)}
+														</div>
 													</div>
 													<div
 														className={css.icon}
@@ -153,7 +214,18 @@ const CardCountry = ({
 															e.preventDefault();
 															e.stopPropagation();
 															getNameCountry(country.name);
-															e.target.classList.toggle('success');
+															if (!e.target.classList.contains('success')) {
+																e.target.classList.add('success');
+																setChangeIconEU(true);
+															} else {
+																e.target.classList.remove('success');
+																setChangeIconEU(false);
+															}
+
+															setIterEU(true);
+															setTimeout(() => {
+																setIterEU(false);
+															}, 1000);
 														}}
 														title='Добавление страны в "Просмотреть позже"'
 													>
@@ -193,6 +265,13 @@ const CardCountry = ({
 												<>
 													<div className={css.card__Img}>
 														<img src={country.cardImg} alt='' />
+														<div className={iterAZ ? css.animationMy : css.sea}>
+															{changeItemAZ ? (
+																'Страна сохранена'
+															) : (
+																<> Сохранение удалено &#128274;</>
+															)}
+														</div>
 													</div>
 													<div
 														className={css.icon}
@@ -200,7 +279,18 @@ const CardCountry = ({
 															e.preventDefault();
 															e.stopPropagation();
 															getNameCountry(country.name);
-															e.target.classList.toggle('success');
+															if (!e.target.classList.contains('success')) {
+																e.target.classList.add('success');
+																setChangeIconAZ(true);
+															} else {
+																e.target.classList.remove('success');
+																setChangeIconAZ(false);
+															}
+
+															setIterAZ(true);
+															setTimeout(() => {
+																setIterAZ(false);
+															}, 1000);
 														}}
 														title='Добавление страны в "Просмотреть позже"'
 													>
@@ -240,6 +330,15 @@ const CardCountry = ({
 												<>
 													<div className={css.card__Img}>
 														<img src={country.cardImg} alt='' />
+														<div
+															className={iterOUR ? css.animationMy : css.sea}
+														>
+															{changeItemOUR ? (
+																'Страна сохранена'
+															) : (
+																<> Сохранение удалено &#128274;</>
+															)}
+														</div>
 													</div>
 													<div
 														className={css.icon}
@@ -247,7 +346,18 @@ const CardCountry = ({
 															e.preventDefault();
 															e.stopPropagation();
 															getNameCountry(country.name);
-															e.target.classList.toggle('success');
+															if (!e.target.classList.contains('success')) {
+																e.target.classList.add('success');
+																setChangeIconOUR(true);
+															} else {
+																e.target.classList.remove('success');
+																setChangeIconOUR(false);
+															}
+
+															setIterOUR(true);
+															setTimeout(() => {
+																setIterOUR(false);
+															}, 1000);
 														}}
 														title='Добавление страны в "Просмотреть позже"'
 													>
