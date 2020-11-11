@@ -22,7 +22,7 @@ function Quiz({ arr }) {
 			setError(error + 1);
 			setTimeout(() => {
 				eTarget.classList.remove('danger');
-			}, 1000);
+			}, 700);
 		}
 	};
 

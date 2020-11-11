@@ -28,11 +28,9 @@ function DisplayOther({ data, setNum }) {
 											{Array.from(data.yourSaveCountres).map(
 												(country, index) => {
 													return (
-														<>
-															<div className={css.f} key={index}>
-																<div className={css.p}>{country}</div>
-															</div>
-														</>
+														<div className={css.f} key={index}>
+															<div className={css.p}>{country}</div>
+														</div>
 													);
 												}
 											)}

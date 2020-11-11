@@ -41,7 +41,7 @@ const initialState = {
 			rightAnswer: 'Замок',
 		},
 		{
-			question: 'Где изобрели первое в мире радио?',
+			question: 'Где изобрели первую керосиновую лампу?',
 			answer: ['Германия', 'США', 'Украина', 'Польша'],
 			rightAnswer: 'Украина',
 		},
@@ -56,6 +56,7 @@ export function otherReducer(state = initialState, action) {
 				countresOnCard: (state.countresOnCard = action.payload),
 				yourSaveCountres: state.yourSaveCountres.add(state.countresOnCard),
 				quizEng: state.quizEng,
+				quizFlag: state.quizFlag,
 			};
 
 		default:
