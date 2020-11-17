@@ -42,15 +42,7 @@ const App = ({ isAttraction, idModalImg }) => {
 					component={() => <Other nameCountry={nameCountry} />}
 				/>
 			</Switch>
-			<Route
-				path='/allCountrys'
-				component={() => (
-					<ListCountrys
-						setNameCountry={setNameCountry}
-						nameCountry={nameCountry}
-					/>
-				)}
-			/>
+			<Route path='/allCountrys' component={() => <ListCountrys />} />
 		</div>
 	);
 };

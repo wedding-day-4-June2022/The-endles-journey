@@ -1,0 +1,10 @@
+.success {
+	width: 300px;
+	height: 200px;
+	background-color: crimson;
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	display: flex;
+	justify-content: c;
+}
