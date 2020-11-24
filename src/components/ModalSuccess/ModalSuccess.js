@@ -1,6 +1,4 @@
 import React from 'react';
-import css from './ModalSuccess.module.css';
-import { connect } from 'react-redux';
 
 const ModalSuccess = ({ MyPageYOffset, nameCountry }) => {
 	const widthMy = document.documentElement.clientWidth / 12;
@@ -24,11 +22,4 @@ const ModalSuccess = ({ MyPageYOffset, nameCountry }) => {
 	return <div style={objSuccess}>{`Страна '${nameCountry}' добавленна`}</div>;
 };
 
-const mapStateToProps = (state) => {
-	return {};
-};
-const mapDispatchToProps = (dispatch) => {
-	return {};
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(ModalSuccess);
+export default ModalSuccess;

@@ -46,9 +46,6 @@
 	text-shadow: 1px 1px 3px white, -1px -1px 3px white;
 	margin: 4% 0;
 }
-.card p {
-	color: black;
-}
 
 .card:hover {
 	background-color: rgba(0, 0, 0, 0.4);
@@ -64,4 +61,8 @@
 	font-weight: 700;
 	font-size: 1.2em;
 	margin: 0 3%;
+}
+.arrow {
+	color: #00ffff;
+	font-size: 5em;
 }

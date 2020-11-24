@@ -38,7 +38,7 @@ function DisplayOther({ data, setNum }) {
 									) : null}
 								</div>
 							</div>
-							<p>descr</p>
+							<p className={css.arrow}>&raquo;</p>
 						</div>
 					);
 				})}
