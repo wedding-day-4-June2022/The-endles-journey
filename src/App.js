@@ -12,17 +12,15 @@ import Main from './pages/Main';
 import Modal from './components/Modal/Modal';
 import ModalImg from './components/ModalImg/ModalImg';
 import Other from './pages/Other';
+import StartingModalHelper from './ui/StartingModalHelper/StartingModalHelper';
 
 const App = ({ isAttraction, idModalImg }) => {
-	const [nameCountry, setNameCountry] = useState(null);
+	const [helper, setHelper] = useState(true);
 
-	// if (nameCountry) {
-	// 	setTimeout(() => {
-	// 		setNameCountry(null);
-	// 	}, 500);
-	// }
 	return (
 		<div className='block'>
+			{helper ? <StartingModalHelper setHelper={setHelper} /> : null}
+
 			{isAttraction
 				? ReactDOM.createPortal(<Modal />, document.getElementById('portal'))
 				: null}
@@ -36,11 +34,7 @@ const App = ({ isAttraction, idModalImg }) => {
 
 			<Switch>
 				<Route exact path={'/'} component={() => <Main />} />
-				<Route
-					exact
-					path={'/other'}
-					component={() => <Other nameCountry={nameCountry} />}
-				/>
+				<Route exact path={'/other'} component={() => <Other />} />
 			</Switch>
 			<Route path='/allCountrys' component={() => <ListCountrys />} />
 		</div>
